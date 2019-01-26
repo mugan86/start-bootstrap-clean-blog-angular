@@ -64,6 +64,13 @@
     <code>src/app/components/header/header.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Header component</p>
+
+    </p>
 
 
 
@@ -150,12 +157,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/components/header/header.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/header/header.component.ts:16</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Add config data</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -164,6 +173,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -178,6 +188,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Inject Config service to listen changes in background url</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -225,10 +239,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/components/header/header.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/header/header.component.ts:16</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Background url to add and load background depending Page</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -241,13 +261,23 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ConfigService } from &#x27;./../../services/config.service&#x27;;
 import { Component } from &#x27;@angular/core&#x27;;
 
+/**
+ * Header component
+ */
 @Component({
   selector: &#x27;blog-header&#x27;,
   templateUrl: &#x27;./header.component.html&#x27;,
   styleUrls: [&#x27;./header.component.css&#x27;]
 })
 export class HeaderComponent {
+  /**
+   * Background url to add and load background depending Page
+   */
   bgUrl: string;
+  /**
+   * Add config data
+   * @param config Inject Config service to listen changes in background url
+   */
   constructor(private config: ConfigService) {
     this.config.bgVar$.subscribe( data &#x3D;&gt; {
       console.log(&#x27;header&#x27;, data);

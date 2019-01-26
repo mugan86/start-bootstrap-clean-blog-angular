@@ -59,31 +59,19 @@
             <code>src/app/services/config.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service to configure theme need values and properties</p>
+
+            </p>
 
 
             <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#bgVar">bgVar</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#bgVar$">bgVar$</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -139,13 +127,15 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/services/config.service.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/config.service.ts:25</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Use to update url when change page</p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -155,6 +145,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -169,6 +160,10 @@
                                                     </td>
                                                     
 
+                                                        <td>
+                                                                <code><p>Background apply new url</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -188,80 +183,6 @@
         </table>
 </section>
 
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="bgVar"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            bgVar
-                            </b>
-                            <a href="#bgVar"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>bgVar:     <code></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Subject&lt;string&gt;()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/services/config.service.ts:9</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="bgVar$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            bgVar$
-                            </b>
-                            <a href="#bgVar$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>bgVar$:     <code></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>this.bgVar.asObservable()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/config.service.ts:10</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
 
     </div>
 
@@ -270,15 +191,27 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import { Subject } from &#x27;rxjs&#x27;;
 
+/**
+ * Service to configure theme need values and properties
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class ConfigService {
   // Use to share info about background URL
+  /**
+   * @ignore
+   */
   public bgVar &#x3D; new Subject&lt;string&gt;();
+  /**
+   * @ignore
+   */
   public bgVar$ &#x3D; this.bgVar.asObservable();
 
-  // Use to update url when change page
+  /**
+   * Use to update url when change page
+   * @param newUrl Background apply new url
+   */
   public updatebgUrlSubject(newUrl: string) {
     this.bgVar.next(newUrl);
   }
