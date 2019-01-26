@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { ConfigService } from './../../services/config.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'blog-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(config: ConfigService) {
+    config.updatebgUrlSubject('./assets/img/about-bg.jpg');
   }
 
 }

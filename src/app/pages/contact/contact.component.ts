@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { ConfigService } from './../../services/config.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'blog-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(config: ConfigService) {
+    config.updatebgUrlSubject('./assets/img/contact-bg.jpg');
   }
 
 }
