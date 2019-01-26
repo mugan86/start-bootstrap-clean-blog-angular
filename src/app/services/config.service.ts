@@ -5,11 +5,11 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ConfigService {
-  // Para compartir información
+  // Use to share info about background URL
   public bgVar = new Subject<string>();
   public bgVar$ = this.bgVar.asObservable();
-  constructor() { }
-  // Create a method that allows you to update the subject being watched by observable
+
+  // Use to update url when change page
   public updatebgUrlSubject(newUrl: string) {
     this.bgVar.next(newUrl);
   }
