@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prod": "ng build --prod --base-href='./'",
-    "compodoc": "npx compodoc -p src/tsconfig.app.json --output docs/documentation"
+    "compodoc": "npx compodoc -p src/tsconfig.app.json --output docs/documentation",
+    "github.docs": "git status && git add docs/ && git commit -m \"Update demo\" && git push origin master",
+    "publish.doc": "npm run prod && npm run compodoc && npm run github.docs"
   },
   "private": true,
   "dependencies": {
