@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>HeaderComponent</li>
+  <li>SidebarComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,18 +61,17 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/components/header/header.component.ts</code>
+    <code>src/app/components/sidebar/sidebar.component.ts</code>
 </p>
 
+
+
     <p class="comment">
-        <h3>Description</h3>
+        <h3>Implements</h3>
     </p>
     <p class="comment">
-        <p>Header component</p>
-
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
     </p>
-
-
 
 
 <section>
@@ -92,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>blog-header</code></td>
+                <td class="col-md-9"><code>blog-sidebar</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./header.component.css</code></td>
+                <td class="col-md-9"><code>./sidebar.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./header.component.html</code></td>
+                <td class="col-md-9"><code>./sidebar.component.html</code></td>
             </tr>
 
 
@@ -122,21 +121,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
+                        <h6><b>Methods</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#bgUrl">bgUrl</a>
+                                <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
-
 
 
 
@@ -152,49 +151,61 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(config: <a href="../injectables/ConfigService.html">ConfigService</a>)</code>
+<code>constructor()</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/header/header.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/components/sidebar/sidebar.component.ts:8</a></div>
                             </td>
                         </tr>
 
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Add config data</p>
-</div>
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                                    <td>Description</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>config</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="../injectables/ConfigService.html" target="_self" >ConfigService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>Inject Config service to listen changes in background url</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/components/sidebar/sidebar.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
                             </div>
                     </td>
                 </tr>
@@ -203,86 +214,22 @@
 </section>
 
 
-
-
-
-
-    <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="bgUrl"></a>
-                        <span class="name">
-                            <b>
-                            bgUrl
-                            </b>
-                            <a href="#bgUrl"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>bgUrl:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/header/header.component.ts:16</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Background url to add and load background depending Page</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
-
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ConfigService } from &#x27;./../../services/config.service&#x27;;
-import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
-/**
- * Header component
- */
 @Component({
-  selector: &#x27;blog-header&#x27;,
-  templateUrl: &#x27;./header.component.html&#x27;,
-  styleUrls: [&#x27;./header.component.css&#x27;]
+  selector: &#x27;blog-sidebar&#x27;,
+  templateUrl: &#x27;./sidebar.component.html&#x27;,
+  styleUrls: [&#x27;./sidebar.component.css&#x27;]
 })
-export class HeaderComponent {
-  /**
-   * Background url to add and load background depending Page
-   */
-  bgUrl: string;
-  /**
-   * Add config data
-   * @param config Inject Config service to listen changes in background url
-   */
-  constructor(private config: ConfigService) {
-    this.config.bgVar$.subscribe( data &#x3D;&gt; {
-      console.log(&#x27;header&#x27;, data);
-      this.bgUrl &#x3D; data;
-    });
+export class SidebarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
   }
 
 }
@@ -290,26 +237,70 @@ export class HeaderComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;!-- Page Header --&gt;
-&lt;header class&#x3D;&quot;masthead&quot; [ngStyle]&#x3D;&quot;{background: &#x27;url(&#x27; + bgUrl + &#x27;)&#x27;}&quot;
-  &gt;
-  &lt;div class&#x3D;&quot;overlay&quot;&gt;&lt;/div&gt;
-  &lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;div class&#x3D;&quot;col-lg-8 col-md-10 mx-auto&quot;&gt;
-        &lt;div class&#x3D;&quot;site-heading&quot;&gt;
-          &lt;h1&gt;Clean Blog&lt;/h1&gt;
-          &lt;span class&#x3D;&quot;subheading&quot;&gt;A Blog Theme by Start Bootstrap&lt;/span&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Sidebar Widgets Column --&gt;
+
+
+  &lt;!-- Search Widget --&gt;
+  &lt;div class&#x3D;&quot;card my-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;card-header&quot;&gt;Search&lt;/h5&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;div class&#x3D;&quot;input-group&quot;&gt;
+        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Search for...&quot;&gt;
+        &lt;span class&#x3D;&quot;input-group-btn&quot;&gt;
+          &lt;button class&#x3D;&quot;btn btn-secondary&quot; type&#x3D;&quot;button&quot;&gt;Go!&lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Categories Widget --&gt;
+  &lt;div class&#x3D;&quot;card my-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;card-header&quot;&gt;Categories&lt;/h5&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+          &lt;ul class&#x3D;&quot;list-unstyled mb-0&quot;&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Web Design&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;HTML&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Freebies&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+          &lt;ul class&#x3D;&quot;list-unstyled mb-0&quot;&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;JavaScript&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;CSS&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href&#x3D;&quot;#&quot;&gt;Tutorials&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/header&gt;</code></pre>
+
+  &lt;!-- Side Widget --&gt;
+  &lt;div class&#x3D;&quot;card my-4&quot;&gt;
+    &lt;h5 class&#x3D;&quot;card-header&quot;&gt;Side Widget&lt;/h5&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4
+      card containers!
+    &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./header.component.css</code>
+                    <code>./sidebar.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -339,10 +330,10 @@ export class HeaderComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Page Header --><header class="masthead" [ngStyle]="{background: \'url(\' + bgUrl + \')\'}"  >  <div class="overlay"></div>  <div class="container">    <div class="row">      <div class="col-lg-8 col-md-10 mx-auto">        <div class="site-heading">          <h1>Clean Blog</h1>          <span class="subheading">A Blog Theme by Start Bootstrap</span>        </div>      </div>    </div>  </div></header></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Sidebar Widgets Column -->  <!-- Search Widget -->  <div class="card my-4">    <h5 class="card-header">Search</h5>    <div class="card-body">      <div class="input-group">        <input type="text" class="form-control" placeholder="Search for...">        <span class="input-group-btn">          <button class="btn btn-secondary" type="button">Go!</button>        </span>      </div>    </div>  </div>  <!-- Categories Widget -->  <div class="card my-4">    <h5 class="card-header">Categories</h5>    <div class="card-body">      <div class="row">        <div class="col-lg-6">          <ul class="list-unstyled mb-0">            <li>              <a href="#">Web Design</a>            </li>            <li>              <a href="#">HTML</a>            </li>            <li>              <a href="#">Freebies</a>            </li>          </ul>        </div>        <div class="col-lg-6">          <ul class="list-unstyled mb-0">            <li>              <a href="#">JavaScript</a>            </li>            <li>              <a href="#">CSS</a>            </li>            <li>              <a href="#">Tutorials</a>            </li>          </ul>        </div>      </div>    </div>  </div>  <!-- Side Widget -->  <div class="card my-4">    <h5 class="card-header">Side Widget</h5>    <div class="card-body">      You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4      card containers!    </div>  </div></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'blog-about'},{'name': 'AppComponent', 'selector': 'blog-root'},{'name': 'ContactComponent', 'selector': 'blog-contact'},{'name': 'CoursesComponent', 'selector': 'blog-courses'},{'name': 'FooterComponent', 'selector': 'blog-footer'},{'name': 'HeaderComponent', 'selector': 'blog-header'},{'name': 'HomeComponent', 'selector': 'blog-home'},{'name': 'NavbarComponent', 'selector': 'blog-navbar'},{'name': 'NotFoundComponent', 'selector': 'blog-not-found'},{'name': 'PortfolioComponent', 'selector': 'blog-portfolio'},{'name': 'PostComponent', 'selector': 'blog-post'},{'name': 'SidebarComponent', 'selector': 'blog-sidebar'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+    var ACTUAL_COMPONENT = {'name': 'SidebarComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -376,7 +367,7 @@ export class HeaderComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SidebarComponent.html';
        </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>

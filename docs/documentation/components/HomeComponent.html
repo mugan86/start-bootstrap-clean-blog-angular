@@ -189,10 +189,71 @@ export class HomeComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;
-  home works!
-&lt;/p&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-lg-8 col-md-10 mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;post-preview&quot;&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;/post&#x27;]&quot;&gt;
+        &lt;h2 class&#x3D;&quot;post-title&quot;&gt;
+          Man must explore, and this is exploration at its greatest
+        &lt;/h2&gt;
+        &lt;h3 class&#x3D;&quot;post-subtitle&quot;&gt;
+          Problems look mighty small from 150 miles up
+        &lt;/h3&gt;
+      &lt;/a&gt;
+      &lt;p class&#x3D;&quot;post-meta&quot;&gt;Posted by
+        &lt;a href&#x3D;&quot;#&quot;&gt;Start Bootstrap&lt;/a&gt;
+        on September 24, 2018&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class&#x3D;&quot;post-preview&quot;&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;/post&#x27;]&quot;&gt;
+        &lt;h2 class&#x3D;&quot;post-title&quot;&gt;
+          I believe every human has a finite number of heartbeats. I don&#x27;t intend to waste any of mine.
+        &lt;/h2&gt;
+      &lt;/a&gt;
+      &lt;p class&#x3D;&quot;post-meta&quot;&gt;Posted by
+        &lt;a href&#x3D;&quot;#&quot;&gt;Start Bootstrap&lt;/a&gt;
+        on September 18, 2018&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class&#x3D;&quot;post-preview&quot;&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;/post&#x27;]&quot;&gt;
+        &lt;h2 class&#x3D;&quot;post-title&quot;&gt;
+          Science has not yet mastered prophecy
+        &lt;/h2&gt;
+        &lt;h3 class&#x3D;&quot;post-subtitle&quot;&gt;
+          We predict too much for the next year and yet far too little for the next ten.
+        &lt;/h3&gt;
+      &lt;/a&gt;
+      &lt;p class&#x3D;&quot;post-meta&quot;&gt;Posted by
+        &lt;a href&#x3D;&quot;#&quot;&gt;Start Bootstrap&lt;/a&gt;
+        on August 24, 2018&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;div class&#x3D;&quot;post-preview&quot;&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;/post&#x27;]&quot;&gt;
+        &lt;h2 class&#x3D;&quot;post-title&quot;&gt;
+          Failure is not an option
+        &lt;/h2&gt;
+        &lt;h3 class&#x3D;&quot;post-subtitle&quot;&gt;
+          Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+        &lt;/h3&gt;
+      &lt;/a&gt;
+      &lt;p class&#x3D;&quot;post-meta&quot;&gt;Posted by
+        &lt;a href&#x3D;&quot;#&quot;&gt;Start Bootstrap&lt;/a&gt;
+        on July 8, 2018&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;hr&gt;
+    &lt;!-- Pager --&gt;
+    &lt;div class&#x3D;&quot;clearfix&quot;&gt;
+      &lt;a class&#x3D;&quot;btn btn-primary float-right&quot; href&#x3D;&quot;#&quot;&gt;Older Posts &amp;rarr;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+    &lt;blog-sidebar&gt;&lt;/blog-sidebar&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -227,8 +288,8 @@ export class HomeComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>  home works!</p></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'blog-about'},{'name': 'AppComponent', 'selector': 'blog-root'},{'name': 'ContactComponent', 'selector': 'blog-contact'},{'name': 'CoursesComponent', 'selector': 'blog-courses'},{'name': 'FooterComponent', 'selector': 'blog-footer'},{'name': 'HeaderComponent', 'selector': 'blog-header'},{'name': 'HomeComponent', 'selector': 'blog-home'},{'name': 'NavbarComponent', 'selector': 'blog-navbar'},{'name': 'NotFoundComponent', 'selector': 'blog-not-found'},{'name': 'PortfolioComponent', 'selector': 'blog-portfolio'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-lg-8 col-md-10 mx-auto">    <div class="post-preview">      <a [routerLink]="[\'/post\']">        <h2 class="post-title">          Man must explore, and this is exploration at its greatest        </h2>        <h3 class="post-subtitle">          Problems look mighty small from 150 miles up        </h3>      </a>      <p class="post-meta">Posted by        <a href="#">Start Bootstrap</a>        on September 24, 2018</p>    </div>    <hr>    <div class="post-preview">      <a [routerLink]="[\'/post\']">        <h2 class="post-title">          I believe every human has a finite number of heartbeats. I don\'t intend to waste any of mine.        </h2>      </a>      <p class="post-meta">Posted by        <a href="#">Start Bootstrap</a>        on September 18, 2018</p>    </div>    <hr>    <div class="post-preview">      <a [routerLink]="[\'/post\']">        <h2 class="post-title">          Science has not yet mastered prophecy        </h2>        <h3 class="post-subtitle">          We predict too much for the next year and yet far too little for the next ten.        </h3>      </a>      <p class="post-meta">Posted by        <a href="#">Start Bootstrap</a>        on August 24, 2018</p>    </div>    <hr>    <div class="post-preview">      <a [routerLink]="[\'/post\']">        <h2 class="post-title">          Failure is not an option        </h2>        <h3 class="post-subtitle">          Many say exploration is part of our destiny, but it’s actually our duty to future generations.        </h3>      </a>      <p class="post-meta">Posted by        <a href="#">Start Bootstrap</a>        on July 8, 2018</p>    </div>    <hr>    <!-- Pager -->    <div class="clearfix">      <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>    </div>  </div>  <div class="col-lg-4">    <blog-sidebar></blog-sidebar>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'blog-about'},{'name': 'AppComponent', 'selector': 'blog-root'},{'name': 'ContactComponent', 'selector': 'blog-contact'},{'name': 'CoursesComponent', 'selector': 'blog-courses'},{'name': 'FooterComponent', 'selector': 'blog-footer'},{'name': 'HeaderComponent', 'selector': 'blog-header'},{'name': 'HomeComponent', 'selector': 'blog-home'},{'name': 'NavbarComponent', 'selector': 'blog-navbar'},{'name': 'NotFoundComponent', 'selector': 'blog-not-found'},{'name': 'PortfolioComponent', 'selector': 'blog-portfolio'},{'name': 'PostComponent', 'selector': 'blog-post'},{'name': 'SidebarComponent', 'selector': 'blog-sidebar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

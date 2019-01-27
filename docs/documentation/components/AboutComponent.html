@@ -190,13 +190,21 @@ export class AboutComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga
-  atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error,
-  repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus,
-  minus!&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse
-  est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!&lt;/p&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">
+&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-lg-8 col-md-10 mx-auto&quot;&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga
+          atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error,
+          repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus,
+          minus!&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse
+          est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+    &lt;blog-sidebar&gt;&lt;/blog-sidebar&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -231,8 +239,8 @@ export class AboutComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga  atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error,  repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus,  minus!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse  est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'blog-about'},{'name': 'AppComponent', 'selector': 'blog-root'},{'name': 'ContactComponent', 'selector': 'blog-contact'},{'name': 'CoursesComponent', 'selector': 'blog-courses'},{'name': 'FooterComponent', 'selector': 'blog-footer'},{'name': 'HeaderComponent', 'selector': 'blog-header'},{'name': 'HomeComponent', 'selector': 'blog-home'},{'name': 'NavbarComponent', 'selector': 'blog-navbar'},{'name': 'NotFoundComponent', 'selector': 'blog-not-found'},{'name': 'PortfolioComponent', 'selector': 'blog-portfolio'}];
+        var COMPONENT_TEMPLATE = '<div><div class="row">  <div class="col-lg-8 col-md-10 mx-auto">      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga          atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error,          repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus,          minus!</p>        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse          est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>  </div>  <div class="col-lg-4">    <blog-sidebar></blog-sidebar>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'blog-about'},{'name': 'AppComponent', 'selector': 'blog-root'},{'name': 'ContactComponent', 'selector': 'blog-contact'},{'name': 'CoursesComponent', 'selector': 'blog-courses'},{'name': 'FooterComponent', 'selector': 'blog-footer'},{'name': 'HeaderComponent', 'selector': 'blog-header'},{'name': 'HomeComponent', 'selector': 'blog-home'},{'name': 'NavbarComponent', 'selector': 'blog-navbar'},{'name': 'NotFoundComponent', 'selector': 'blog-not-found'},{'name': 'PortfolioComponent', 'selector': 'blog-portfolio'},{'name': 'PostComponent', 'selector': 'blog-post'},{'name': 'SidebarComponent', 'selector': 'blog-sidebar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AboutComponent'};
 </script>
