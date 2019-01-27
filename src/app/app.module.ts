@@ -1,3 +1,4 @@
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AppRoutingModule } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PostComponent } from './pages/post/post.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     PortfolioComponent,
     CoursesComponent,
     NotFoundComponent,
+    PostComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
