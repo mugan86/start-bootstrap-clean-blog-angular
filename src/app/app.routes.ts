@@ -3,20 +3,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
-/**
- * {
-    path: '',
-    loadChildren: './home/home.module#HomeModule'
-  },
-  {
-    path: 'about',
-    loadChildren: './about/about.module#AboutModule'
-  },
- */
-
 const APP_ROUTES: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'about', component: AboutComponent },
