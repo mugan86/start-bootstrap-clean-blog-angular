@@ -14,6 +14,8 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PostComponent } from './pages/post/post.component';
+import { YoutubePipe } from './pipes/youtube.pipe';
+import { DomSecurePipe } from './pipes/dom-secure.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { PostComponent } from './pages/post/post.component';
     NotFoundComponent,
     PostComponent,
     SidebarComponent,
+    YoutubePipe,
+    DomSecurePipe,
   ],
   imports: [
     BrowserModule,
