@@ -1,27 +1,15 @@
 import { SharedElement } from './../../interfaces/shared-element.interface';
 import { Component } from '@angular/core';
 
-/**
- * Component to manage different data and elements to Footer
- */
 @Component({
   selector: 'blog-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  /**
-   * Current year value
-   */
   currentYear: number = new Date().getFullYear();
-  /**
-   * Web author
-   */
   author = 'Anartz Mugika Ledo';
 
-  /**
-   * Define want shared elements to add in footer with font awesome
-   */
   sharedElements: SharedElement[] = [
     {
       url: 'https://twitter.com/',
