@@ -1,18 +1,20 @@
 <div class="row">
 
-  <div class="col-md-8">
-    <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+  <div class="col-md-6">
+    <img class="img-fluid" src="https://i.udemycdn.com/course/750x422/1777518_b681_6.jpg" alt=""><br>
+    <a [href]="compodocUrl" target="_blank" class="btn btn-outline-info project-main">Acceder al curso con descuento</a>
   </div>
 
-  <div class="col-md-4">
-    <h3 class="my-3">Project Description</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-    <h3 class="my-3">Project Details</h3>
+  <div class="col-md-6">
+    <h3 class="my-3">Curso Compodoc</h3>
+    <span class="badge badge-secondary">con descuento</span>&nbsp;<span class="badge badge-success">curso</span>
+    <p>Crea documentación fácil para nuestros proyectos de Ionic, Angular y / o Typescript.</p>
+    <h3 class="my-3 features">¿Qu&eacute; podemos encontrar aqu&iacute;?</h3>
     <ul>
-      <li>Lorem Ipsum</li>
-      <li>Dolor Sit Amet</li>
-      <li>Consectetur</li>
-      <li>Adipiscing Elit</li>
+      <li>Crear documentaci&oacute;n b&aacute;sica con los ajustes b&aacute;sicos</li>
+      <li>Personalizar con plantillas existentes</li>
+      <li>Crear nuestra plantilla personalizada</li>
+      <li>Y más...</li>
     </ul>
   </div>
 
@@ -20,33 +22,49 @@
 <!-- /.row -->
 
 <!-- Related Projects Row -->
-<h3 class="my-4">Related Projects</h3>
+<h3 class="my-4 features">Más proyectos</h3>
 
 <div class="row">
 
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-10">
+          <a [href]="infoNpmCourse" target="_blank"><img class="card-img-top" src="https://i.udemycdn.com/course/750x422/1992318_a8ef_3.jpg" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a [href]="infoNpmCourse" target="_blank">Curso NPM</a>
+            </h4>
+            <span class="badge badge-secondary">proximamente</span>&nbsp;<span class="badge badge-success">curso</span>
+            <p class="card-text">Crear librerías Node con JS, Typescript y Angular.</p>
+            <a [href]="infoNpmCourse" target="_blank" class="btn btn-outline-info project-main">M&aacute;s informaci&oacute;n</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-10">
+          <a [href]="githubUserWidget" target="_blank"><img class="card-img-top" src="./../../../assets/img/github-widget.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a [href]="githubUserWidget">Github User Widget</a>
+            </h4>
+            <span class="badge badge-danger">npm</span>&nbsp;<span class="badge badge-info">angular</span>
+            <p class="card-text">Widget del usuario de Github en Angular.</p>
+            <a [href]="githubUserWidget" target="_blank" class="btn btn-outline-info project-main">M&aacute;s informaci&oacute;n</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-10">
+          <a [href]="angularGA"><img class="card-img-top" src="./../../../assets/img/analytics2.png" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a [href]="angularGA">Google Analytics Angular</a>
+            </h4>
+            <span class="badge badge-danger">npm</span>&nbsp;<span class="badge badge-info">angular</span>
+            <p class="card-text">Librer&iacute;a para añadir Google Analytics en nuestras aplicaciones de Angular.</p>
+            <a [href]="angularGA" target="_blank" class="btn btn-outline-info project-main">M&aacute;s informaci&oacute;n</a>
+          </div>
+        </div>
+      </div>
 
 </div>
 <!-- /.row -->

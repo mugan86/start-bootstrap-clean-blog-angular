@@ -17,6 +17,14 @@ export class ConfigService {
    * @ignore
    */
   public bgVar$ = this.bgVar.asObservable();
+  /**
+   * @ignore
+   */
+  public subtitleVar = new Subject<string>();
+  /**
+   * @ignore
+   */
+  public subtitleVar$ = this.subtitleVar.asObservable();
 
   /**
    * Use to update url when change page
@@ -24,5 +32,9 @@ export class ConfigService {
    */
   public updatebgUrlSubject(newUrl: string) {
     this.bgVar.next(newUrl);
+  }
+
+  public updatesubtitleVarSubject(newSubtitle: string) {
+    this.subtitleVar.next(newSubtitle);
   }
 }

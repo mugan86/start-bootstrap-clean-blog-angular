@@ -47,6 +47,16 @@ export class FooterComponent {
       url: 'https://npmjs.com/',
       path: '~mugan86',
       icon: 'fab fa-npm'
+    },
+    {
+      url: 'https://www.youtube.com/',
+      path: 'channel/UCTh7-deUJBNv2tHRiMGcXxg',
+      icon: 'fab fa-youtube'
+    },
+    {
+      url: 'https://www.instagram.com/',
+      path: 'amule86',
+      icon: 'fab fa-instagram'
     }
   ];
 }
