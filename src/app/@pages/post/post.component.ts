@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateConfigService } from 'src/app/@core/services/translate-config.service';
 
 @Component({
   selector: 'blog-post',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private translateService: TranslateConfigService) { }
 
   ngOnInit() {
   }

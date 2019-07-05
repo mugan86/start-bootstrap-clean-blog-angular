@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~8.1.0",
     "@angular/platform-browser-dynamic": "~8.1.0",
     "@angular/router": "~8.1.0",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "angular2-cookie-law": "^7.0.1",
     "core-js": "^2.5.4",
     "mugan86-ng-google-analytics": "^1.1.1",

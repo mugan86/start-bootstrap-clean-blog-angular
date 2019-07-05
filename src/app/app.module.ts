@@ -13,6 +13,10 @@ import { DomSecurePipe } from './@core/pipes/dom-secure.pipe';
 import { SidebarModule } from './@core/components/sidebar/sidebar.module';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateCustomModule } from './@core/modules/translate-custom.module';
+
 const COMPONENTS = [
   AppComponent
 ];
@@ -41,9 +45,12 @@ const PIPES = [
         analyticsId: 'UA-57700600-14', // Add your track id
         showLog: false
       }
-    )
+    ),
+    HttpClientModule,
+    TranslateCustomModule.forRoot(['es', 'en', 'eu'], 'es')
 
   ],
+  exports: [ TranslateCustomModule ],
   providers: [],
   bootstrap: [AppComponent]
 })
