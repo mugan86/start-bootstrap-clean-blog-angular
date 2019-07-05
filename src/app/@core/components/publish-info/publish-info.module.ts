@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './button.component';
 import { LazyLoadModule } from '../../modules/lazy-loading.module';
+import { PublishInfoComponent } from './publish-info.component';
+
+
 
 @NgModule({
-  declarations: [ButtonComponent],
+  declarations: [PublishInfoComponent],
   imports: [
     CommonModule,
     LazyLoadModule
   ],
-  exports: [ButtonComponent],
+  exports: [PublishInfoComponent],
 })
-export class ButtonModule { }
+export class PublishInfoModule { }

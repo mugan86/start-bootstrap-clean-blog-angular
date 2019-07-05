@@ -11,14 +11,11 @@
             </div>
             <div class="col-lg-10">
               <h2 class="card-title">Post Title</h2>
+              <blog-publish-info></blog-publish-info>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-              <a href="#" class="btn btn-primary float-right">Read More &rarr;</a>
+              <blog-button></blog-button>
             </div>
           </div>
-        </div>
-        <div class="card-footer text-muted">
-          Posted on January 1, 2017 by
-          <a href="#">Start Bootstrap</a>
         </div>
       </div>
     <!--<div class="post-preview">
@@ -76,7 +73,7 @@
     <hr>
     <!-- Pager -->
     <div class="clearfix">
-      <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+      <a class="btn btn-primary float-right" href="#">{{ 'buttons.olderPosts' | translate }} &rarr;</a>
     </div>
   </div>
   <div class="col-lg-4">

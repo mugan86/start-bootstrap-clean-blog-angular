@@ -1,5 +1,9 @@
 {
     "HELLO_WORLD": "ddddd",
+    "buttons": {
+        "olderPosts": "Post antiguos",
+        "readMore": "Leer más"
+    },
     "menus": {
         "about": "Sobre mi",
         "contact": "Contacto",

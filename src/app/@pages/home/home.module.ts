@@ -6,6 +6,8 @@ import { HomeComponent } from './home.component';
 import { SidebarModule } from 'src/app/@core/components/sidebar/sidebar.module';
 import { PosterImageModule } from 'src/app/@core/components/poster-image/poster-image.module';
 import { SharedPagesModule } from '../shared-pages.module';
+import { ButtonModule } from 'src/app/@core/components/button/button.module';
+import { PublishInfoModule } from 'src/app/@core/components/publish-info/publish-info.module';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { SharedPagesModule } from '../shared-pages.module';
     SharedPagesModule,
     HomeRoutingModule,
     SidebarModule,
-    PosterImageModule
+    PosterImageModule,
+    ButtonModule,
+    PublishInfoModule
   ],
   exports: [HomeComponent]
 })
