@@ -10,5 +10,7 @@ import { TranslateConfigService } from 'src/app/@core/services/translate-config.
 export class HomeComponent {
   constructor(config: ConfigService, private translateService: TranslateConfigService) {
     config.updatebgUrlSubject('./assets/img/home-bg.jpg');
+    config.updateTitleSubject('articles.last');
+    config.updateSubtitleSubject('articles.description');
   }
 }

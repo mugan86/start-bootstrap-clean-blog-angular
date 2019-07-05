@@ -1,11 +1,13 @@
 import { HeaderComponent } from './header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateCustomModule } from '../../modules/translate-custom.module';
 
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateCustomModule
   ],
   exports: [HeaderComponent]
 })
