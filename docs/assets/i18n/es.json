@@ -1,14 +1,23 @@
 {
     "HELLO_WORLD": "ddddd",
+    "articles": {
+        "last": "Últimos artículos",
+        "description": "Tutoriales, promoción de cursos,..."
+    },
     "buttons": {
         "olderPosts": "Post antiguos",
         "readMore": "Leer más"
     },
+    "cookies":{
+        "message": "Este sitio utiliza cookies para mejorar la experiencia de usuario. Si continuas navegando considero que aceptas el uso de cookies."
+    },
+    "publishedBy": "Publicado por",
     "menus": {
         "about": "Sobre mi",
         "contact": "Contacto",
         "home": "Blog",
         "language": "Idioma",
         "portfolio": "Portfolio"
-    }
+    },
+    "showMoreArticles": "Mostrar más artículos"
 }
