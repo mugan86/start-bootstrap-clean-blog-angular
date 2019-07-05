@@ -9,19 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" >Home</a>
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" >{{ 'menus.home' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">About</a>
+          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active">{{ 'menus.about' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a>
+          <a class="nav-link" [routerLink]="['/portfolio']" routerLinkActive="active">{{ 'menus.portfolio' | translate}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/post']" routerLinkActive="active">Sample Post</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
+          <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active">{{ 'menus.contact' | translate}}</a>
         </li>
       </ul>
     </div>

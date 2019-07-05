@@ -1,15 +1,15 @@
 import { ContactComponent } from './contact.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { SidebarModule } from 'src/app/@core/components/sidebar/sidebar.module';
+import { SharedPagesModule } from '../shared-pages.module';
 
 
 @NgModule({
   declarations: [ContactComponent],
   imports: [
-    CommonModule,
+    SharedPagesModule,
     ContactRoutingModule,
     SidebarModule
   ],

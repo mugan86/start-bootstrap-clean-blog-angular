@@ -1,5 +1,6 @@
 import { ConfigService } from './../../@core/services/config.service';
 import { Component } from '@angular/core';
+import { TranslateConfigService } from 'src/app/@core/services/translate-config.service';
 
 @Component({
   selector: 'blog-about',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
-  constructor(config: ConfigService) {
+  constructor(config: ConfigService, private translateService: TranslateConfigService) {
     config.updatebgUrlSubject('./assets/img/about-bg.jpg');
   }
 

@@ -1,3 +1,10 @@
 {
-    "HELLO_WORLD": "ddddd"
+    "HELLO_WORLD": "ddddd",
+    "menus": {
+        "about": "Sobre mi",
+        "contact": "Contacto",
+        "home": "Blog",
+        "language": "Idioma",
+        "portfolio": "Portfolio"
+    }
 }
