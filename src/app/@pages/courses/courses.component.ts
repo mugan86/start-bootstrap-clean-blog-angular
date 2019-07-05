@@ -1,5 +1,5 @@
-import { ConfigService } from './../../services/config.service';
 import { Component } from '@angular/core';
+import { ConfigService } from 'src/app/@core/services/config.service';
 
 @Component({
   selector: 'blog-courses',

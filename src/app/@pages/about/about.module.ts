@@ -1,4 +1,4 @@
-import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+import { SidebarModule } from 'src/app/@core/components/sidebar/sidebar.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

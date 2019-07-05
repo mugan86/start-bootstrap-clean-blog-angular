@@ -1,4 +1,4 @@
-import { ConfigService } from './../../services/config.service';
+import { ConfigService } from './../../@core/services/config.service';
 import { Component } from '@angular/core';
 
 @Component({

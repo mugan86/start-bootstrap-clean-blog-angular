@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
+import { SidebarModule } from 'src/app/@core/components/sidebar/sidebar.module';
+import { PosterImageModule } from 'src/app/@core/components/poster-image/poster-image.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SidebarModule } from 'src/app/components/sidebar/sidebar.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SidebarModule
+    SidebarModule,
+    PosterImageModule
   ],
   exports: [HomeComponent]
 })
