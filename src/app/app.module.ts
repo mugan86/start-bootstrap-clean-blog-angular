@@ -14,7 +14,6 @@ import { SidebarModule } from './@core/components/sidebar/sidebar.module';
 import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
 import { TranslateCustomModule } from './@core/modules/translate-custom.module';
 
 const COMPONENTS = [

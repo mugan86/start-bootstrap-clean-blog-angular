@@ -38,6 +38,12 @@ MIT
 @angular/router
 MIT
 
+@ngx-translate/core
+MIT
+
+@ngx-translate/http-loader
+MIT
+
 angular2-cookie-law
 MIT
 
