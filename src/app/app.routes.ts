@@ -9,6 +9,7 @@ const APP_ROUTES: Routes = [
     { path: 'contact', loadChildren: () => import('./@pages/contact/contact.module').then(m => m.ContactModule)},
     { path: 'login', loadChildren: () => import('./@pages/account/login/login.module').then(m => m.LoginModule)},
     { path: 'register', loadChildren: () => import('./@pages/account/register/register.module').then(m => m.RegisterModule)},
+    { path: 'courses', loadChildren: () => import('./@pages/courses/courses.module').then(m => m.CoursesModule)},
     { path: '**', pathMatch: 'full' , redirectTo: 'home' },
 ];
 
