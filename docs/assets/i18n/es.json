@@ -17,7 +17,9 @@
         "contact": "Contacto",
         "home": "Blog",
         "language": "Idioma",
-        "portfolio": "Portfolio"
+        "portfolio": "Portfolio",
+        "login": "Login",
+        "register": "Registro"
     },
     "showMoreArticles": "Mostrar más artículos"
 }
