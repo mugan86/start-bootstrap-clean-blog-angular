@@ -10,6 +10,7 @@ import { LazyLoadModule } from '../@core/modules/lazy-loading.module';
   exports: [
     CommonModule,
     LazyLoadModule
-  ]
+  ],
+  declarations: []
 })
 export class SharedPagesModule { }

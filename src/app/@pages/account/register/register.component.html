@@ -1,0 +1,66 @@
+<div class="row animated fadeIn fast">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form (ngSubmit)="save()" #forma="ngForm">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input id="name" type="text" name="name" class="form-control"
+                    [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid}" required minlength="4"
+                    [(ngModel)]="register.name" #name="ngModel" placeholder="Hero email">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                    <div *ngIf="name.errors.required">
+                        name is required.
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                        name must be at least 4 characters long.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Apellido/s</label>
+                <input id="lastname" type="text" name="lastname" class="form-control"
+                    [ngClass]="{'is-valid': !lastname.invalid, 'is-invalid': lastname.invalid}" required minlength="4"
+                    [(ngModel)]="register.lastname" #lastname="ngModel" placeholder="Hero lastname">
+                <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                    <div *ngIf="lastname.errors.required">
+                        name is required.
+                    </div>
+                    <div *ngIf="lastname.errors.minlength">
+                        name must be at least 4 characters long.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input id="email" type="email" name="email" class="form-control"
+                    [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}" required minlength="4"
+                    [(ngModel)]="register.email" #email="ngModel" placeholder="Hero email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                    <div *ngIf="email.errors.required">
+                        email is required.
+                    </div>
+                    <div *ngIf="email.errors.minlength">
+                        email must be at least 4 characters long.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Email</label>
+                <input id="password" type="password" name="password" class="form-control"
+                    [ngClass]="{'is-valid': !password.invalid, 'is-invalid': password.invalid}" required minlength="4"
+                    [(ngModel)]="register.password" #password="ngModel" placeholder="Password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                    <div *ngIf="password.errors.required">
+                        Password is required.
+                    </div>
+                    <div *ngIf="password.errors.minlength">
+                        Password must be at least 4 characters long.
+                    </div>
+                </div>
+            </div>
+            <button [disabled]="!forma.valid" type="submit" class="btn btn-outline-primary">Register</button>
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>

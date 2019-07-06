@@ -7,6 +7,8 @@ const APP_ROUTES: Routes = [
     { path: 'post', loadChildren: () => import('./@pages/post/post.module').then(m => m.PostModule)},
     { path: 'portfolio', loadChildren: () => import('./@pages/portfolio/portfolio.module').then(m => m.PortfolioModule)},
     { path: 'contact', loadChildren: () => import('./@pages/contact/contact.module').then(m => m.ContactModule)},
+    { path: 'login', loadChildren: () => import('./@pages/account/login/login.module').then(m => m.LoginModule)},
+    { path: 'register', loadChildren: () => import('./@pages/account/register/register.module').then(m => m.RegisterModule)},
     { path: '**', pathMatch: 'full' , redirectTo: 'home' },
 ];
 
