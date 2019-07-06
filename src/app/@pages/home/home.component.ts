@@ -1,6 +1,7 @@
 import { ConfigService } from './../../@core/services/config.service';
 import { Component } from '@angular/core';
 import { TranslateConfigService } from 'src/app/@core/services/translate-config.service';
+import { HOME } from 'src/app/@core/components/header/header.constants';
 
 @Component({
   selector: 'blog-home',
@@ -9,8 +10,8 @@ import { TranslateConfigService } from 'src/app/@core/services/translate-config.
 })
 export class HomeComponent {
   constructor(config: ConfigService, private translateService: TranslateConfigService) {
-    config.updatebgUrlSubject('./assets/img/home-bg.jpg');
-    config.updateTitleSubject('articles.last');
-    config.updateSubtitleSubject('articles.description');
+    config.updatebgUrlSubject(HOME.bg);
+    config.updateTitleSubject(HOME.title);
+    config.updateSubtitleSubject(HOME.subtitle);
   }
 }
