@@ -3,7 +3,7 @@
     <div class="col-md-6">
         <h2>Login</h2>
         <form (ngSubmit)="save()" #forma="ngForm">
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="name">Username</label>
                 <input id="username" type="text" name="username" class="form-control"
                     [ngClass]="{'is-valid': !username.invalid, 'is-invalid': username.invalid}" required minlength="4"
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="password">Password</label>
                 <input id="password" type="password" name="password" class="form-control"
                     [ngClass]="{'is-valid': !password.invalid, 'is-invalid': password.invalid}" required minlength="4"
@@ -31,6 +31,7 @@
                     </div>
                 </div>
             </div>
+            <br/>
             <button [disabled]="!forma.valid" type="submit" class="btn btn-info">Login</button>
             &nbsp;<a [routerLink]="['/register']" class="btn btn-outline-info">Register</a>
         </form>

@@ -8,8 +8,16 @@
         "olderPosts": "Post antiguos",
         "readMore": "Leer más"
     },
+    "contact": {
+        "title": "Contacto",
+        "description": "Escribe un mensaje con lo que desees comentar"
+    },
     "cookies":{
         "message": "Este sitio utiliza cookies para mejorar la experiencia de usuario. Si continuas navegando considero que aceptas el uso de cookies."
+    },
+    "courses": {
+        "title": "Cursos",
+        "description": "Lista de cursos online"
     },
     "publishedBy": "Publicado por",
     "menus": {
@@ -21,6 +29,10 @@
         "portfolio": "Portfolio",
         "login": "Login",
         "register": "Registro"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Lista de los trabajos que he realizado"
     },
     "showMoreArticles": "Mostrar más artículos"
 }

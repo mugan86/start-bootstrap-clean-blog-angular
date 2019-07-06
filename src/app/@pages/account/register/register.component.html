@@ -2,7 +2,7 @@
     <div class="col-md-3"></div>
     <div class="col-md-6">
         <form (ngSubmit)="save()" #forma="ngForm">
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="name">Nombre</label>
                 <input id="name" type="text" name="name" class="form-control"
                     [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid}" required minlength="4"
@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="lastname">Apellido/s</label>
                 <input id="lastname" type="text" name="lastname" class="form-control"
                     [ngClass]="{'is-valid': !lastname.invalid, 'is-invalid': lastname.invalid}" required minlength="4"
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="name">Email</label>
                 <input id="email" type="email" name="email" class="form-control"
                     [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}" required minlength="4"
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group floating-label-form-group controls">
                 <label for="password">Email</label>
                 <input id="password" type="password" name="password" class="form-control"
                     [ngClass]="{'is-valid': !password.invalid, 'is-invalid': password.invalid}" required minlength="4"
@@ -58,6 +58,7 @@
                     </div>
                 </div>
             </div>
+            <br/>
             <button [disabled]="!forma.valid" type="submit" class="btn btn-outline-info">Register</button>
             &nbsp;<a [routerLink]="['/login']" class="btn btn-outline-danger">Cancel</a>
         </form>
