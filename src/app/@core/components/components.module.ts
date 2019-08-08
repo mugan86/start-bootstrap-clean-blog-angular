@@ -4,6 +4,7 @@ import { NavbarModule } from './navbar/navbar.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AccessDirectComponent } from './access-direct/access-direct.component';
 
 @NgModule({
   imports: [

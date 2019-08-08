@@ -9,9 +9,14 @@ import { HOME } from 'src/app/@core/components/header/header.constants';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  loading: boolean;
   constructor(config: ConfigService, private translateService: TranslateConfigService) {
     config.updatebgUrlSubject(HOME.bg);
     config.updateTitleSubject(HOME.title);
     config.updateSubtitleSubject(HOME.subtitle);
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 1500);
   }
 }

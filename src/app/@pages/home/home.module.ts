@@ -8,6 +8,7 @@ import { PosterImageModule } from 'src/app/@core/components/poster-image/poster-
 import { SharedPagesModule } from '../shared-pages.module';
 import { ButtonModule } from 'src/app/@core/components/button/button.module';
 import { PublishInfoModule } from 'src/app/@core/components/publish-info/publish-info.module';
+import { AccessDirectModule } from 'src/app/@core/components/access-direct/access-direct.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PublishInfoModule } from 'src/app/@core/components/publish-info/publish
     SidebarModule,
     PosterImageModule,
     ButtonModule,
-    PublishInfoModule
+    PublishInfoModule,
+    AccessDirectModule
   ],
   exports: [HomeComponent]
 })

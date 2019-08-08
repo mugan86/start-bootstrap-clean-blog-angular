@@ -1,4 +1,9 @@
-<div class="row">
+<div class="row" *ngIf="loading">
+  <div class="col-lg">
+    <blog-loading></blog-loading>
+  </div>
+</div>
+<div class="row" *ngIf="!loading">
   <div class="col-lg-8 col-md-10 mx-auto">
      <!-- Blog Post -->
     <div class="card mb-4">
@@ -75,10 +80,11 @@
     <!--<div class="clearfix">
       <a class="btn btn-primary float-center" href="#">{{ 'buttons.olderPosts' | translate }} </a>
     </div>-->
-    <div class="load-more"> <img style="margin-bottom: 35px; display: block;" src="/assets/img/more-content-loader.gif" alt="Cargando..."> <a href="#" data-category="all" data-number="18" style="display: inline-block;">{{'showMoreArticles' | translate}}</a></div>
+    <!--<div class="load-more"> <img style="margin-bottom: 35px; display: block;" src="/assets/img/more-content-loader.gif" alt="Cargando..."> <a href="#" data-category="all" data-number="18" style="display: inline-block;">{{'showMoreArticles' | translate}}</a></div>-->
   </div>
   <div class="col-lg-4">
-    <blog-sidebar></blog-sidebar>
+    <!--<blog-sidebar></blog-sidebar>-->
+    <blog-access-direct></blog-access-direct>
   </div>
 
 </div>
