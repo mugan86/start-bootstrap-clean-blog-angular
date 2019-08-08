@@ -2,5 +2,5 @@
     margin: 50px auto;
     width: 200px;
     height: 200px;
-    background-image: url('/assets/img/loading.png')
+    background-image: url('https://raw.githubusercontent.com/mugan86/start-bootstrap-clean-blog-angular/master/src/assets/img/loading.png')
 }
