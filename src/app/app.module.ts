@@ -15,6 +15,7 @@ import { NgModule } from '@angular/core';
 
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateCustomModule } from './@core/modules/translate-custom.module';
+import { GraphqlModule } from './@graphql/modules/graphql.module';
 
 const COMPONENTS = [
   AppComponent
@@ -46,10 +47,10 @@ const PIPES = [
       }
     ),
     HttpClientModule,
-    TranslateCustomModule.forRoot(['es', 'en', 'eu'], 'es')
-
+    TranslateCustomModule.forRoot(['es', 'en', 'eu'], 'es'),
+    GraphqlModule
   ],
-  exports: [ TranslateCustomModule ],
+  exports: [TranslateCustomModule],
   providers: [],
   bootstrap: [AppComponent]
 })
