@@ -18,3 +18,18 @@ export const getUsers = gql`
         }
     }
 `;
+
+export const getCourse = gql`
+    {
+        courses {
+            id
+            title
+            description
+            image
+            url
+            isPaid
+            publish
+            youtubeVideo
+        }
+    }
+`;
