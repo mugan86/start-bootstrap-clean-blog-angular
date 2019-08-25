@@ -10,15 +10,15 @@ export class ApiService {
 
   constructor(private apollo: Apollo) { }
 
-  private getQuery() {
+  private getQuery(query: any) {
     return this.apollo.watchQuery({
-      query: getCourse,
+      query,
       fetchPolicy: 'network-only'
     });
   }
 
   getCourse() {
-    return this.getQuery().valueChanges.pipe(map((result: any) => {
+    return this.getQuery(getCourse).valueChanges.pipe(map((result: any) => {
       return result.data.courses;
     }));
   }

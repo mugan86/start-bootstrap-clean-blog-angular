@@ -1,37 +1,20 @@
-<div class="row">
-  <div class="col-lg-4 portfolio-item">
+<blog-loading  *ngIf="loading"></blog-loading>
+<div class="row" *ngIf="!loading">
+  <div class="col-lg-4 portfolio-item" *ngFor="let course of courses">
     <div class="card h-100">
-      <a href="#"><blog-poster-image [classValues]="'card-img-top'" [src]="'https://i.udemycdn.com/course/750x422/2338870_2107.jpg'"></blog-poster-image></a>
+      <a href="{{course.url}}" target="_blank" title="{{course.description}}">
+        <blog-poster-image [classValues]="'card-img-top'" [src]="course.image" [alt]="course.description"></blog-poster-image>
+      </a>
       <div class="card-body">
         <h4 class="card-title">
-          <a href="#">GraphQL con Angular de 0 a experto. JWT, Sockets, MongoDB</a>
+          <a href="{{course.url}}" target="_blank">{{ course.title }}</a>
         </h4>
-        <p class="card-text">GraphQL con Angular desde 0 a experto paso a paso. Apollo Client, JWT, App en tiempo real, MongoDB, Heroku, Postman.</p>
-        <a href="https://www.udemy.com/user/anartzmugika/" target="_blank" class="btn btn-danger">Finales Agosto 2019</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 portfolio-item">
-    <div class="card h-100">
-      <a href="#"><blog-poster-image [classValues]="'card-img-top'" [src]="'https://i.udemycdn.com/course/750x422/1992318_a8ef_3.jpg'"></blog-poster-image></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">NPM.Desarrollo y publicación de librerias en JS, TS, Angular</a>
-        </h4>
-        <p class="card-text">¡Aprende desde 0 las nociones de NPM y a crear librerías Node en Javascript Typescript Angular con ejemplos prácticos!</p>
-        <a href="https://www.udemy.com/npm-librerias-node-con-js-typescript-angular-y-otras-herramientas/?couponCode=PR_PRECIO_BAJO" target="_blank" class="btn btn-info">Acceder al curso</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4 portfolio-item">
-    <div class="card h-100">
-      <a href="#"><blog-poster-image [classValues]="'card-img-top'" [src]="'https://i.udemycdn.com/course/750x422/1777518_b681_6.jpg'"></blog-poster-image></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Compodoc: Documentación de proyectos</a>
-        </h4>
-        <p class="card-text">Crear documentación de calidad y MUY fácil de mantener con Compodoc para proyectos de Angular 2+ / Ionic 2+ / Typescript.</p>
-        <a href="https://www.udemy.com/compodoc-crea-documentacion-en-angular-ionic/" target="_blank" class="btn btn-info">Acceder al curso</a>
+        <p class="card-text">{{ course.description }}</p>
+        <a href="{{course.url}}" target="_blank" class="btn"
+          [ngClass]="{'btn-danger': !course.publish, 'btn-info': course.publish}">
+          <span *ngIf="course.publish">{{ 'buttons.accessCourse' | translate }}</span>
+          <span *ngIf="!course.publish">{{ 'buttons.nextComming' | translate }}</span>
+        </a>
       </div>
     </div>
   </div>

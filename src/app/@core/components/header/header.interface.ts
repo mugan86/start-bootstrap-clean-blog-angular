@@ -3,3 +3,4 @@ export interface Header {
     subtitle?: string;
     bg?: string;
 }
+

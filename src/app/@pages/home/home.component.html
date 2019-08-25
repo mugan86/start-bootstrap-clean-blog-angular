@@ -1,8 +1,4 @@
-<div class="row" *ngIf="loading">
-  <div class="col-lg">
-    <blog-loading></blog-loading>
-  </div>
-</div>
+<blog-loading  *ngIf="loading"></blog-loading>
 <div class="row" *ngIf="!loading">
   <div class="col-lg-8 col-md-10 mx-auto">
      <!-- Blog Post -->

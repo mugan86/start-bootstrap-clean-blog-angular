@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PosterImageComponent implements OnInit {
   @Input() classValues: string;
   @Input() src: string;
+  @Input() alt: string;
   constructor() { }
 
   ngOnInit() {

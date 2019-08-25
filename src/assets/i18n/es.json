@@ -6,7 +6,9 @@
     },
     "buttons": {
         "olderPosts": "Post antiguos",
-        "readMore": "Leer más"
+        "readMore": "Leer más",
+        "accessCourse": "Accede al curso",
+        "nextComming": "Próximamente"
     },
     "contact": {
         "title": "Contacto",

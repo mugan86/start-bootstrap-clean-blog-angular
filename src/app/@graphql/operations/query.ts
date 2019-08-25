@@ -30,6 +30,10 @@ export const getCourse = gql`
             isPaid
             publish
             youtubeVideo
+            cuponCode
+            publishDate
+            updatedDate
+            time
         }
     }
 `;
