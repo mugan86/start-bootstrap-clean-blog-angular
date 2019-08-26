@@ -35,6 +35,11 @@ export class FooterComponent {
       url: 'https://npmjs.com/',
       path: '~mugan86',
       icon: 'fab fa-npm'
+    },
+    {
+      url: 'https://www.youtube.com/',
+      path: 'mugan86',
+      icon: 'fab fa-youtube'
     }
   ];
 }

@@ -2,6 +2,7 @@ import { ConfigService } from './../../@core/services/config.service';
 import { Component } from '@angular/core';
 import { TranslateConfigService } from 'src/app/@core/services/translate-config.service';
 import { HOME } from 'src/app/@core/components/header/header.constants';
+import { ApiService } from 'src/app/@graphql/services/api.service';
 
 @Component({
   selector: 'blog-home',
@@ -10,7 +11,7 @@ import { HOME } from 'src/app/@core/components/header/header.constants';
 })
 export class HomeComponent {
   loading: boolean;
-  constructor(config: ConfigService, private translateService: TranslateConfigService) {
+  constructor(config: ConfigService, private translateService: TranslateConfigService, private api: ApiService) {
     config.updatebgUrlSubject(HOME.bg);
     config.updateTitleSubject(HOME.title);
     config.updateSubtitleSubject(HOME.subtitle);
@@ -18,5 +19,10 @@ export class HomeComponent {
     setTimeout(() => {
       this.loading = false;
     }, 1500);
+
+    this.api.getPosts(1, 10).subscribe(data => {
+      console.log(data);
+      // this.loading = false;
+    });
   }
 }

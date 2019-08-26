@@ -37,3 +37,25 @@ export const getCourse = gql`
         }
     }
 `;
+
+
+export const getPosts = gql`
+    query postList($page: Int!, $itemsPage: Int!) {
+        posts (page: $page, itemsPage: $itemsPage) {
+            id
+            title
+            text
+            author {
+                id
+                name
+                lastname
+                role {
+                    name
+                }
+            }
+            createdAt
+            updatedAt
+            active
+        }
+    }
+`;
