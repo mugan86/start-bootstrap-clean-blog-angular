@@ -42,20 +42,29 @@ export const getCourse = gql`
 export const getPosts = gql`
     query postList($page: Int!, $itemsPage: Int!) {
         posts (page: $page, itemsPage: $itemsPage) {
-            id
-            title
-            text
-            author {
-                id
-                name
-                lastname
-                role {
-                    name
-                }
+            info {
+                page
+                pages
+                total
+                itemsPage
             }
-            createdAt
-            updatedAt
-            active
+            posts {
+                id
+                title
+                text
+                author {
+                    id
+                    name
+                    lastname
+                    role {
+                        name
+                    }
+                }
+                thumbnail
+                createdAt
+                updatedAt
+                active
+            }
         }
     }
 `;
