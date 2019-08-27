@@ -48,7 +48,7 @@ export const getPosts = gql`
                 total
                 itemsPage
             }
-            posts {
+            results {
                 id
                 title
                 text

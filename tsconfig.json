@@ -18,6 +18,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "seo-title-meta-tags-angular": [
+        "dist/seo-title-meta-tags-angular"
+      ],
+      "seo-title-meta-tags-angular/*": [
+        "dist/seo-title-meta-tags-angular/*"
+      ]
+    }
   }
 }

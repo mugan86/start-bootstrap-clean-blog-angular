@@ -30,7 +30,7 @@ export class CoursesComponent {
     this.translateService.getStringByLabel(COURSES.title).subscribe((data) => {
       const title = data;
       this.translateService.getStringByLabel(COURSES.subtitle).subscribe((sub) => {
-        this.titleService.setTitle('Anartz Mugika Ledo /'.concat(title).concat(' - ').concat(sub));
+        this.titleService.setTitle('Anartz Mugika Ledo - '.concat(title).concat(' - ').concat(sub));
       });
     })
     ;

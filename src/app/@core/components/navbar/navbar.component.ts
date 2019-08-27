@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   constructor() {
     $(window).on('scroll', function() {
-      if ($(window).scrollTop() > 200) {
+      if ($(window).scrollTop() > 110) {
           $('#mainNav').addClass('header-paint');
       } else {
           // remove the background property so it comes transparent again (defined in your css)

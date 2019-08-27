@@ -4,6 +4,7 @@ import { TranslateConfigService } from 'src/app/@core/services/translate-config.
 import { HOME } from 'src/app/@core/components/header/header.constants';
 import { ApiService } from 'src/app/@graphql/services/api.service';
 import { Post } from 'src/app/@core/interfaces/api.interface';
+import { SeoTitleMetaTagsAngularService } from 'projects/seo-title-meta-tags-angular/src/public-api';
 
 @Component({
   selector: 'blog-home',
@@ -13,7 +14,8 @@ import { Post } from 'src/app/@core/interfaces/api.interface';
 export class HomeComponent {
   loading: boolean;
   posts: Post[] = [];
-  constructor(config: ConfigService, private translateService: TranslateConfigService, private api: ApiService) {
+  constructor(config: ConfigService, private translateService: TranslateConfigService,
+    private api: ApiService, private seoTitleMetaTags: SeoTitleMetaTagsAngularService) {
     config.updatebgUrlSubject(HOME.bg);
     config.updateTitleSubject(HOME.title);
     config.updateSubtitleSubject(HOME.subtitle);
@@ -25,7 +27,12 @@ export class HomeComponent {
     this.api.getPosts(1, 5).subscribe(data => {
       console.log(data);
       this.loading = false;
-      this.posts = data.posts;
+      this.posts = data.results;
     });
+    const keywords = 'Udemy, Anartz Mugika, Angular 8, GraphQL, Personal Blog, Portfolio, Schema, Cursos Online, Tutoriales';
+    const description = 'Cursos online Anartz Mugika en anartz-mugika.com';
+    const author = 'mugan86, Anartz Mugika Ledo';
+    this.seoTitleMetaTags.setTitlePage('Anartz Mugika Ledo', 'Blog');
+    this.seoTitleMetaTags.setMetaTags(keywords, description, author);
   }
 }

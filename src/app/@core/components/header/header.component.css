@@ -1,0 +1,9 @@
+.masthead .container {
+    max-width: 1280px;
+    height: 350px;
+}
+
+header.masthead .site-heading {
+    text-align: center;
+    margin-top: -70px;
+}
