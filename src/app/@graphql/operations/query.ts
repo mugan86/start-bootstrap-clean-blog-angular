@@ -34,10 +34,15 @@ export const getCourse = gql`
             publishDate
             updatedDate
             time
+            novelty
+            categories {
+                id
+                title
+                color
+            }
         }
     }
 `;
-
 
 export const getPosts = gql`
     query postList($page: Int!, $itemsPage: Int!) {
@@ -51,19 +56,27 @@ export const getPosts = gql`
             results {
                 id
                 title
+                subtitle
                 text
                 author {
                     id
                     name
                     lastname
+                    email
+                    username
                     role {
                         name
                     }
+                }
+                categories {
+                    id
+                    title
                 }
                 thumbnail
                 createdAt
                 updatedAt
                 active
+                important
             }
         }
     }
