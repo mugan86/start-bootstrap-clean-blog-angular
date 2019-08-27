@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'blog-publish-info',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./publish-info.component.css']
 })
 export class PublishInfoComponent implements OnInit {
-
+  @Input() important: boolean;
   constructor() { }
 
   ngOnInit() {

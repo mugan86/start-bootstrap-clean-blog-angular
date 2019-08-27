@@ -1,3 +1,13 @@
 .portfolio-item {
     margin-bottom: 20px
 }
+
+.categories {
+    position: relative;
+    top: -11px;
+    color: white;
+    margin-right: 4px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: medium;
+}

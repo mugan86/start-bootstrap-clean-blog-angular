@@ -11,8 +11,8 @@
               </a>
             </div>
             <div class="col-lg-9">
-              <h2 class="card-title">{{ p.title }}</h2>
-              <blog-publish-info></blog-publish-info>
+              <h2 class="card-title"><a href="">{{ p.title }}</a></h2>
+              <blog-publish-info [important]="p.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="p.subtitle"></div>
               <blog-button></blog-button>
             </div>

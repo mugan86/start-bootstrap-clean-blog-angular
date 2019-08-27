@@ -6,6 +6,9 @@
         <blog-poster-image [classValues]="'card-img-top'" [src]="course.image" [alt]="course.description"></blog-poster-image>
       </a>
       <div class="card-body">
+        <span class="categories" [ngStyle]="{'background-color': c.color}" *ngFor="let c of course.categories" >
+          {{ c.title }}
+        </span>
         <h4 class="card-title">
           <a href="{{course.url}}" target="_blank">{{ course.title }}</a>
         </h4>
