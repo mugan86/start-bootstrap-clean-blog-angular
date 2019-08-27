@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { getCourse, getPosts } from '../operations/query';
+import { getCourse, getPosts, login } from '../operations/query';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -27,6 +27,12 @@ export class ApiService {
   getPosts(page: number, itemsPage: number) {
     return this.getQuery({page, itemsPage}, getPosts).valueChanges.pipe(map((result: any) => {
       return result.data.posts;
+    }));
+  }
+
+  login(email: string, password: string) {
+    return this.getQuery({email, password}, login).valueChanges.pipe(map((result: any) => {
+      return result.data.login;
     }));
   }
 }

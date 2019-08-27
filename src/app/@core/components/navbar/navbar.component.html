@@ -30,10 +30,13 @@
           <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active">{{ 'menus.contact' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">{{ 'menus.login' | translate}}</a>
+          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active" *ngIf="!access">{{ 'menus.login' | translate}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/register']" routerLinkActive="active">{{ 'menus.register' | translate}}</a>
+          <a class="nav-link" [routerLink]="['/register']" routerLinkActive="active" *ngIf="!access">{{ 'menus.register' | translate}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="active" *ngIf="access">{{ 'menus.admin' | translate}}</a>
         </li>
       </ul>
     </div>
