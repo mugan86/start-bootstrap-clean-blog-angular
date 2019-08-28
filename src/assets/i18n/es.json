@@ -22,6 +22,7 @@
         "description": "Lista de cursos online"
     },
     "footer": {
+        "gplay": "",
         "npm": "NPM - Entra para ver mis proyectos de librerías Angular, JS, TS,...",
         "twitter": "Twitter - Sígueme y podrás tener todas las novedades sobre mis cursos y enlaces a tutoriales interesantes",
         "udemy": "Udemy - ¡Aprende GraphQL, NPM y más con mis cursos!",

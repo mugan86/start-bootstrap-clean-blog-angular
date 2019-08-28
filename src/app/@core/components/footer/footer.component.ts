@@ -37,6 +37,11 @@ export class FooterComponent {
       description: 'footer.linkedin'
     },
     {
+      url: 'https://play.google.com/',
+      path: 'store/apps/developer?id=Anartz+Muxika&hl=es_419',
+      icon: 'fab fa-google-play'
+    },
+    {
       url: 'https://bintray.com/',
       path: 'amugika/maven',
       icon: 'fas fa-frog',
