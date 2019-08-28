@@ -40,6 +40,7 @@ export const getCourse = gql`
                 title
                 color
             }
+            active
         }
     }
 `;

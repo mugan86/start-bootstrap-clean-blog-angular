@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { getCourse, getPosts, login } from '../operations/query';
+import { addMessage } from '../operations/mutation';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -15,6 +16,13 @@ export class ApiService {
       query,
       variables,
       fetchPolicy: 'network-only'
+    });
+  }
+
+  private setMutation(variables: any, mutation: any) {
+    return this.apollo.mutate({
+      mutation,
+      variables
     });
   }
 
@@ -34,5 +42,9 @@ export class ApiService {
     return this.getQuery({email, password}, login).valueChanges.pipe(map((result: any) => {
       return result.data.login;
     }));
+  }
+
+  sendMessageContact(contactValue: any) {
+    return this.setMutation({contact: contactValue}, addMessage);
   }
 }

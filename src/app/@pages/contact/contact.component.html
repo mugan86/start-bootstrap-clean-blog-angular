@@ -5,17 +5,17 @@
     <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
     <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
     <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-    <form name="sentMessage" id="contactForm" novalidate>
+    <form (ngSubmit)="save()" #forma="ngForm">
       <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" placeholder="Name" id="name" required
-          data-validation-required-message="Please enter your name.">
+          data-validation-required-message="Please enter your name." [(ngModel)]="message.name" #name="ngModel" [ngModelOptions]="{standalone: true}">
         <p class="help-block text-danger"></p>
       </div>
       <div class="form-group">
         <label>Email Address</label>
         <input type="email" class="form-control" placeholder="Email Address" id="email" required
-          data-validation-required-message="Please enter your email address.">
+          data-validation-required-message="Please enter your email address." [(ngModel)]="message.email" #email="ngModel" [ngModelOptions]="{standalone: true}">
         <p class="help-block text-danger"></p>
       </div>
       <!--<div class="form-group">
@@ -30,7 +30,7 @@
       <div class="form-groups">
         <label>Message</label>
         <textarea rows="5" class="form-control" placeholder="Message" id="message" required
-          data-validation-required-message="Please enter a message."></textarea>
+          data-validation-required-message="Please enter a message." [(ngModel)]="message.message" #message="ngModel" [ngModelOptions]="{standalone: true}"></textarea>
         <p class="help-block text-danger"></p>
       </div>
       <br>
