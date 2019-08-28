@@ -4,7 +4,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <ul class="list-inline text-center">
           <li class="list-inline-item" *ngFor="let element of sharedElements">
-            <a href="{{ element.url }}{{ element.path }}/" target="_blank">
+            <a href="{{ element.url }}{{ element.path }}/" target="_blank" title="{{ element.description | translate }}">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="{{ element.icon }} fa-stack-1x fa-inverse"></i>
