@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { getCourse, getPosts, login } from '../operations/query';
+import { getCourse, getPosts, login, mostImportantPostData, selectPost } from '../operations/query';
 import { addMessage } from '../operations/mutation';
 import { map } from 'rxjs/operators';
 
@@ -33,18 +33,30 @@ export class ApiService {
   }
 
   getPosts(page: number, itemsPage: number) {
-    return this.getQuery({page, itemsPage}, getPosts).valueChanges.pipe(map((result: any) => {
+    return this.getQuery({ page, itemsPage }, getPosts).valueChanges.pipe(map((result: any) => {
       return result.data.posts;
     }));
   }
 
   login(email: string, password: string) {
-    return this.getQuery({email, password}, login).valueChanges.pipe(map((result: any) => {
+    return this.getQuery({ email, password }, login).valueChanges.pipe(map((result: any) => {
       return result.data.login;
     }));
   }
 
   sendMessageContact(contactValue: any) {
-    return this.setMutation({contact: contactValue}, addMessage);
+    return this.setMutation({ contact: contactValue }, addMessage);
+  }
+
+  getLastImportant() {
+    return this.getQuery({}, mostImportantPostData).valueChanges.pipe(map((result: any) => {
+      return result.data.mostImportantPost;
+    }));
+  }
+
+  getPost(id: string) {
+    return this.getQuery({ id }, selectPost).valueChanges.pipe(map((result: any) => {
+      return result.data.post;
+    }));
   }
 }

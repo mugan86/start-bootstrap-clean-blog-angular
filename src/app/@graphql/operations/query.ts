@@ -109,3 +109,52 @@ query login($email: String!, $password: String!) {
   }
 }
 `;
+
+
+export const mostImportantPostData = gql`
+query takeImportant {
+    mostImportantPost {
+        id
+        title
+        subtitle
+        text
+        author {
+            id
+        }
+        categories {
+            id
+            title
+        }
+        thumbnail
+        createdAt
+        updatedAt
+        active
+        important
+    }
+}
+`;
+
+export const selectPost = gql`
+query selectPost($id: ID!) {
+    post(id: $id) {
+        id
+        title
+        subtitle
+        text
+        author {
+            id
+        }
+        categories {
+            id
+            title
+        }
+        thumbnail
+        createdAt
+        updatedAt
+        active
+        important
+    }
+}
+`;
+
+

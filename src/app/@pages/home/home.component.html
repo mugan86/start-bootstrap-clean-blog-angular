@@ -2,33 +2,36 @@
 <div class="row" *ngIf="!loading">
   <div class="col-lg-8 col-md-10 mx-auto" >
      <!-- Blog Post -->
-    <div class="card mb-4" *ngFor="let p of posts">
+    <div class="card mb-4">
         <div class="card-body">
           <div class="row">
             <div class="col-lg-3">
-              <a href="#">
-                <blog-poster-image [classValues]="'img-fluid rounded'" [src]="'https://i.udemycdn.com/course/750x422/2338870_2107.jpg'"></blog-poster-image>
+              <a (click)="openPost(important.id)">
+                <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="important.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
+                <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="important.thumbnail" [src]="important.thumbnail"></blog-poster-image>
               </a>
             </div>
             <div class="col-lg-9">
-              <h2 class="card-title"><a href="">{{ p.title }}</a></h2>
-              <blog-publish-info [important]="p.important"></blog-publish-info>
-              <div class="card-text" [innerHtml]="p.subtitle"></div>
+              <h2 class="card-title"><a (click)="openPost(important.id)">{{ important.title }}</a></h2>
+              <blog-publish-info [important]="important.important"></blog-publish-info>
+              <div class="card-text" [innerHtml]="important.subtitle"></div>
               <blog-button></blog-button>
             </div>
           </div>
         </div>
     </div>
+    <hr>
     <div class="card mb-4" *ngFor="let p of posts">
         <div class="card-body">
           <div class="row">
             <div class="col-lg-3">
-              <a href="#">
-                <blog-poster-image [classValues]="'img-fluid rounded'" [src]="'https://i.udemycdn.com/course/750x422/2338870_2107.jpg'"></blog-poster-image>
+              <a (click)="openPost(p.id)">
+                  <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
+                  <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail" [src]="p.thumbnail"></blog-poster-image>
               </a>
             </div>
             <div class="col-lg-9">
-              <h2 class="card-title"><a href="">{{ p.title }}</a></h2>
+              <h2 class="card-title"><a (click)="openPost(p.id)">{{ p.title }}</a></h2>
               <blog-publish-info [important]="p.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="p.subtitle"></div>
               <blog-button></blog-button>
