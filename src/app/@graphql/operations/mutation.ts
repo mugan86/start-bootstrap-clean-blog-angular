@@ -8,6 +8,8 @@ mutation addMessageContact($contact: ContactInput!) {
             id
             name
             email
+            reason
+            createdAt
         }
     }
 }

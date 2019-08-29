@@ -1,43 +1,55 @@
 <div class="row">
   <div class="col-lg-8 col-md-10 mx-auto">
-    <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as
-      possible!</p>
-    <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-    <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-    <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-    <form (ngSubmit)="save()" #forma="ngForm">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" class="form-control" placeholder="Name" id="name" required
-          data-validation-required-message="Please enter your name." [(ngModel)]="message.name" #name="ngModel" [ngModelOptions]="{standalone: true}">
-        <p class="help-block text-danger"></p>
+      <div class="alert alert-success" role="alert" *ngIf="result.status == true">
+          {{ result.message }}
       </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" class="form-control" placeholder="Email Address" id="email" required
-          data-validation-required-message="Please enter your email address." [(ngModel)]="message.email" #email="ngModel" [ngModelOptions]="{standalone: true}">
-        <p class="help-block text-danger"></p>
+      <form (ngSubmit)="save()" #forma="ngForm">
+        <div class="form-group floating-label-form-group controls">
+            <label for="name">Nombre y Apellidos</label>
+            <input id="name" type="text" name="name" class="form-control"
+                [ngClass]="{'is-valid': !name.invalid, 'is-invalid': name.invalid}" required minlength="4"
+                [(ngModel)]="contact.name" #name="ngModel" placeholder="name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                    name is required.
+                </div>
+                <div *ngIf="name.errors.minlength">
+                    name must be at least 4 characters long.
+                </div>
+            </div>
+        </div>
+        <div class="form-group floating-label-form-group controls">
+          <label for="email">Email</label>
+          <input id="email" type="text" name="email" class="form-control"
+              [ngClass]="{'is-valid': !email.invalid, 'is-invalid': email.invalid}" required minlength="4"
+              [(ngModel)]="contact.email" #email="ngModel" placeholder="email">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+              <div *ngIf="email.errors.required">
+                  email is required.
+              </div>
+              <div *ngIf="email.errors.minlength">
+                  email must be at least 4 characters long.
+              </div>
+          </div>
       </div>
-      <!--<div class="form-group">
-        <label for="company">Company</label>
-        <select class="form-control" id="company" [(ngModel)]="contact.company" [ngModelOptions]="{standalone: true}">
-          <option value="Marvel">Marvel</option>
-          <option value="DC">DC</option>
-          <option value="">Other</option>
+      <div class="form-group selection">
+        <label for="reason">Razón del contacto</label>
+        <select class="form-control" id="reason" [(ngModel)]="contact.reason" [ngModelOptions]="{standalone: true}">
+          <option value="info-cursos">Informaci&oacute;n de cursos</option>
+          <option value="projects">Proyectos</option>
+          <option value="colaboration">Colaboración</option>
+          <option value="others">Otros</option>
         </select>
-      </div>-->
-
-      <div class="form-groups">
-        <label>Message</label>
+      </div>
+      <div class="form-group floating-label-form-group controls">
+        <label>Mensaje</label>
         <textarea rows="5" class="form-control" placeholder="Message" id="message" required
-          data-validation-required-message="Please enter a message." [(ngModel)]="message.message" #message="ngModel" [ngModelOptions]="{standalone: true}"></textarea>
+            [(ngModel)]="contact.message" #message="ngModel" [ngModelOptions]="{standalone: true}"></textarea>
         <p class="help-block text-danger"></p>
       </div>
-      <br>
-      <div id="success"></div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </div>
+        
+        <br/>
+        <button [disabled]="!forma.valid" type="submit" class="btn btn-info">Enviar</button>
     </form>
   </div>
   <div class="col-lg-4">
