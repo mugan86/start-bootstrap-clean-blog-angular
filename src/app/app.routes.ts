@@ -15,4 +15,5 @@ const APP_ROUTES: Routes = [
     { path: '**', pathMatch: 'full' , redirectTo: 'blog' },
 ];
 
-export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES, { useHash: true});
+export const AppRoutingModule: ModuleWithProviders =
+    RouterModule.forRoot(APP_ROUTES, { useHash: true, scrollPositionRestoration: 'enabled'});

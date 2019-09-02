@@ -3,14 +3,14 @@ import { Header } from './header.interface';
 export const HOME: Header = {
     title: 'articles.last',
     subtitle: 'articles.description',
-    bg: 'https://mugan86.com/serviraces/web/assets/img/background.jpg'
+    bg: './assets/img/mobile-tunnel.jpg'
     /*bg: './assets/img/home-bg.jpg'*/
 };
 
 export const LOGIN: Header = {
     title: 'login.title',
     subtitle: 'login.description',
-    bg: './assets/img/home-bg.jpg'
+    bg: './assets/img/mackbook.jpg'
 };
 
 export const REGISTER: Header = {
@@ -22,13 +22,13 @@ export const REGISTER: Header = {
 export const ABOUT: Header = {
     title: 'about.title',
     subtitle: 'about.description',
-    bg: './assets/img/home-bg.jpg'
+    bg: './assets/img/graphics.jpg'
 };
 
 export const COURSES: Header = {
     title: 'courses.title',
     subtitle: 'courses.description',
-    bg: './assets/img/home-bg.jpg'
+    bg: './assets/img/office.jpg'
 };
 
 export const CONTACT: Header = {

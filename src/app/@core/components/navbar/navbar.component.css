@@ -3,6 +3,6 @@
 	text-decoration: underline;
 }
 
-.header-paint {
+.header-paint, .header-bg {
 	background-color: cadetblue !important
 }

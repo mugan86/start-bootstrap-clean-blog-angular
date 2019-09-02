@@ -1,5 +1,5 @@
 <!-- Page Header -->
-<header class="masthead" [ngStyle]="{background: 'url(' + bgUrl + ')'}"
+<header *ngIf="show" class="masthead header-bg" [ngStyle]="{background: 'url(' + bgUrl + ') no-repeat scroll 35% 42%'}"
   >
   <div class="overlay"></div>
   <div class="container">

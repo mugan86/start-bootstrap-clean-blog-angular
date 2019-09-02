@@ -11,6 +11,10 @@ export class ConfigService {
   public titleVar$ = this.titleVar.asObservable();
   public subTitleVar = new Subject<string>();
   public subTitlVar$ = this.subTitleVar.asObservable();
+  public currentRouterVar = new Subject<string>();
+  public currentRouterVar$ = this.currentRouterVar.asObservable();
+  public inPostVar = new Subject<boolean>();
+  public inPostVar$ = this.inPostVar.asObservable();
   public updatebgUrlSubject(newUrl: string) {
     this.bgVar.next(newUrl);
   }
@@ -19,5 +23,11 @@ export class ConfigService {
   }
   public updateSubtitleSubject(newSubtitle: string) {
     this.subTitleVar.next(newSubtitle);
+  }
+  public updateCurrentRoute(route: string) {
+    this.currentRouterVar.next(route);
+  }
+  public updateInPost(inpost: boolean) {
+    this.inPostVar.next(inpost);
   }
 }

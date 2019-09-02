@@ -49,7 +49,7 @@ const PIPES = [
     HttpClientModule,
     TranslateCustomModule.forRoot(['es', 'en', 'eu'], 'es'),
     GraphqlModule
-  ],
+    ],
   exports: [TranslateCustomModule],
   providers: [],
   bootstrap: [AppComponent]

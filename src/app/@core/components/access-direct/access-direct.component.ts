@@ -10,6 +10,12 @@ export class AccessDirectComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const body = document.body as HTMLDivElement;
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://apis.google.com/js/platform.js';
+    body.appendChild(script);
   }
 
 }

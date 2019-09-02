@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Declaramos las variables para jQuery
 declare var $: any;
@@ -10,8 +11,15 @@ declare var $: any;
 })
 export class AppComponent {
   title = 'blog-angular';
-
-  constructor() {
+  inPost: boolean;
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+      if (this.router.url.indexOf('/post/') > -1) {
+        this.inPost = true;
+      } else {
+        this.inPost = false;
+      }
+    });
     // Floating label headings for the contact form
     $('body').on('input propertychange', '.floating-label-form-group', function(e) {
       $(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());

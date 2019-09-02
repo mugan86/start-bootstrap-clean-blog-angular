@@ -6,6 +6,7 @@ export interface ResultPosts {
 export interface Post {
     id: string;
     title: string;
+    subtitle: string;
     text: string;
     author: Author;
     createdAt: string;

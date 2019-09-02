@@ -4,6 +4,7 @@ import { TranslateConfigService } from 'src/app/@core/services/translate-config.
 import { CONTACT } from 'src/app/@core/components/header/header.constants';
 import { ApiService } from 'src/app/@graphql/services/api.service';
 import { ContactInterface } from './contact.interface';
+import { SeoTitleMetaTagsAngularService } from 'projects/seo-title-meta-tags-angular/src/public-api';
 
 @Component({
   selector: 'blog-contact',
@@ -22,10 +23,18 @@ export class ContactComponent {
     reason: 'others',
     createdAt: new Date().toISOString()
   };
-  constructor(config: ConfigService, private translateService: TranslateConfigService, private api: ApiService) {
+  constructor(config: ConfigService, private translateService: TranslateConfigService,
+    private api: ApiService, private seoTitleMetaTags: SeoTitleMetaTagsAngularService) {
     config.updatebgUrlSubject(CONTACT.bg);
     config.updateTitleSubject(CONTACT.title);
     config.updateSubtitleSubject(CONTACT.subtitle);
+    config.updateInPost(false);
+    this.seoTitleMetaTags.removeTags();
+    const keywords = 'contacta conmigo, Anartz Mugika, colaboraciones, cursos, sugerencias de contenido';
+    const description = 'Contacta conmigo para posibles colaboraciones, proyectos,...';
+    const author = 'mugan86, Anartz Mugika Ledo';
+    this.seoTitleMetaTags.setTitlePage('Anartz Mugika Ledo', 'Contacta conmigo');
+    this.seoTitleMetaTags.setMetaTags(keywords, description, author);
   }
 
   save() {

@@ -1,7 +1,11 @@
-<article *ngIf="post">
+<blog-loading  *ngIf="loading"></blog-loading>
+<article id="post" *ngIf="!loading">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
+                <h2>{{ post.title }}</h2>
+                <h6>{{ post.subtitle }}</h6>
+                <img  class="center-element" src="{{ post.thumbnail }}" alt="{{ post.title }}"/>
                 <div class="card-text" [innerHtml]="post.text"></div>
             </div>
         </div>

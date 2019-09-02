@@ -406,6 +406,7 @@ footer .copyright {
 .btn-primary {
   background-color: #5F9EA0;
   border-color: #5F9EA0;
+  color: #fff !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {

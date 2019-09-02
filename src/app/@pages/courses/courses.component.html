@@ -1,5 +1,6 @@
 <blog-loading  *ngIf="loading"></blog-loading>
 <div class="row" *ngIf="!loading">
+  <p>¡¡Cursos siempre al precio más bajo posible!!. Para obtenerlo, tenéis que acceder desde los enlaces que corresponden a cada curso.</p>
   <div class="col-lg-4 portfolio-item" *ngFor="let course of courses">
     <div class="card h-100">
       <a href="{{course.url}}" target="_blank" title="{{course.description}}">

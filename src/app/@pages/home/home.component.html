@@ -7,15 +7,15 @@
           <div class="row">
             <div class="col-lg-3">
               <a (click)="openPost(important.id)">
-                <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="important.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
-                <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="important.thumbnail" [src]="important.thumbnail"></blog-poster-image>
+                <blog-poster-image [classValues]="'img-fluid rounded'" [alt]="important.title" *ngIf="important.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
+                <blog-poster-image [classValues]="'img-fluid rounded'" [alt]="important.title" *ngIf="important.thumbnail" [src]="important.thumbnail"></blog-poster-image>
               </a>
             </div>
             <div class="col-lg-9">
               <h2 class="card-title"><a (click)="openPost(important.id)">{{ important.title }}</a></h2>
               <blog-publish-info [important]="important.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="important.subtitle"></div>
-              <blog-button></blog-button>
+              <blog-button [to]="'post'" [param]="important.id" [title]="important.title"></blog-button>
             </div>
           </div>
         </div>
@@ -26,15 +26,15 @@
           <div class="row">
             <div class="col-lg-3">
               <a (click)="openPost(p.id)">
-                  <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
-                  <blog-poster-image [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail" [src]="p.thumbnail"></blog-poster-image>
+                  <blog-poster-image [alt]="p.title" [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail == null" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
+                  <blog-poster-image [alt]="p.title" [classValues]="'img-fluid rounded'" *ngIf="p.thumbnail" [src]="p.thumbnail"></blog-poster-image>
               </a>
             </div>
             <div class="col-lg-9">
               <h2 class="card-title"><a (click)="openPost(p.id)">{{ p.title }}</a></h2>
               <blog-publish-info [important]="p.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="p.subtitle"></div>
-              <blog-button></blog-button>
+              <blog-button [to]="'post'" [param]="p.id" [title]="p.title"></blog-button>
             </div>
           </div>
         </div>

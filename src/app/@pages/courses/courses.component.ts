@@ -5,6 +5,7 @@ import { TranslateConfigService } from 'src/app/@core/services/translate-config.
 import { ApiService } from 'src/app/@graphql/services/api.service';
 import { Course } from './courses.interface';
 import { Title, Meta } from '@angular/platform-browser';
+import { SeoTitleMetaTagsAngularService } from 'projects/seo-title-meta-tags-angular/src/public-api';
 
 @Component({
   selector: 'blog-courses',
@@ -15,29 +16,24 @@ export class CoursesComponent {
   loading: boolean;
   courses: Course[] = [];
   constructor(config: ConfigService, private translateService: TranslateConfigService,
-    private api: ApiService, private titleService: Title, private meta: Meta) {
+    private api: ApiService, private titleService: Title, private meta: Meta,
+    private seoTitleMetaTags: SeoTitleMetaTagsAngularService) {
     config.updatebgUrlSubject(COURSES.bg);
     config.updateTitleSubject(COURSES.title);
     config.updateSubtitleSubject(COURSES.subtitle);
+    config.updateInPost(false);
     this.loading = true;
     this.api.getCourse().subscribe(data => {
-      console.log(data);
       this.loading = false;
       this.courses = data;
     });
 
-    // SEO
-    this.translateService.getStringByLabel(COURSES.title).subscribe((data) => {
-      const title = data;
-      this.translateService.getStringByLabel(COURSES.subtitle).subscribe((sub) => {
-        this.titleService.setTitle('Anartz Mugika Ledo - '.concat(title).concat(' - ').concat(sub));
-      });
-    })
-    ;
-    this.meta.addTag({name: 'keywords', content: 'Udemy, Anartz Mugika, Angular 8, GraphQL, Personal Blog, Portfolio'});
-    this.meta.addTag({name: 'description', content: 'Cursos online Anartz Mugika en anartz-mugika.com'});
-    this.meta.addTag({name: 'author', content: 'mugan86'});
-    this.meta.addTag({name: 'robots', content: 'index, follow'});
+    this.seoTitleMetaTags.removeTags();
+    const keywords = 'Udemy, Anartz Mugika, Angular 8, GraphQL, Personal Blog, Portfolio, Angular, JWT';
+    const description = 'Cursos online al mejor precio con Anartz Mugika Ledo';
+    const author = 'mugan86, Anartz Mugika Ledo';
+    this.seoTitleMetaTags.setTitlePage('Anartz Mugika Ledo', 'Cursos Online al mejor precio');
+    this.seoTitleMetaTags.setMetaTags(keywords, description, author);
   }
 
 }

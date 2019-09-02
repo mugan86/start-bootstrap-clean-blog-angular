@@ -21,6 +21,7 @@ export class HomeComponent {
     config.updatebgUrlSubject(HOME.bg);
     config.updateTitleSubject(HOME.title);
     config.updateSubtitleSubject(HOME.subtitle);
+    config.updateInPost(false);
     this.loading = true;
     /*setTimeout(() => {
       this.loading = false;
@@ -35,7 +36,7 @@ export class HomeComponent {
         this.loading = false;
       });
     });
-
+    this.seoTitleMetaTags.removeTags();
     const keywords = 'Udemy, Anartz Mugika, Angular 8, GraphQL, Personal Blog, Portfolio, Schema, Cursos Online, Tutoriales';
     const description = 'Cursos online Anartz Mugika en anartz-mugika.com';
     const author = 'mugan86, Anartz Mugika Ledo';

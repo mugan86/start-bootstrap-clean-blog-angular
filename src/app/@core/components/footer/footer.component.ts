@@ -39,7 +39,8 @@ export class FooterComponent {
     {
       url: 'https://play.google.com/',
       path: 'store/apps/developer?id=Anartz+Muxika&hl=es_419',
-      icon: 'fab fa-google-play'
+      icon: 'fab fa-google-play',
+      description: 'footer.gplay'
     },
     {
       url: 'https://bintray.com/',

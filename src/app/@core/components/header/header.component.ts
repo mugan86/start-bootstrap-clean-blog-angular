@@ -1,5 +1,5 @@
 import { ConfigService } from './../../services/config.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'blog-header',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input() show: boolean;
   bgUrl: string;
   title: string;
   subtitle: string;
@@ -22,6 +23,10 @@ export class HeaderComponent {
     this.config.subTitlVar$.subscribe( data => {
       console.log('subtitle', data);
       this.subtitle = data;
+    });
+    this.config.inPostVar$.subscribe( data => {
+      console.log('inPost', data);
+      this.show = !data;
     });
   }
 

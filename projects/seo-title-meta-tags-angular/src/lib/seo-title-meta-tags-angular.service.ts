@@ -21,4 +21,14 @@ export class SeoTitleMetaTagsAngularService {
       { name: 'robots', content: robots }
     ]);
   }
+
+  removeTag(tag: string) {
+    this.meta.removeTag(tag);
+  }
+
+  removeTags() {
+    this.removeTag('name=author');
+    this.removeTag('name=description');
+    this.removeTag('name=keywords');
+  }
 }

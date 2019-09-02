@@ -1,12 +1,18 @@
 {
     "HELLO_WORLD": "ddddd",
+    "about": {
+        "title": "Anartz Mugika",
+        "description": "Sobre mí"
+    },
     "articles": {
         "last": "Últimos artículos",
         "description": "Tutoriales, promoción de cursos,..."
     },
     "buttons": {
         "olderPosts": "Post antiguos",
-        "readMore": "Leer más"
+        "readMore": "Leer más",
+        "accessCourse": "Accede al curso",
+        "nextComming": "Próximamente"
     },
     "contact": {
         "title": "Contacto",
@@ -19,9 +25,17 @@
         "title": "Cursos",
         "description": "Lista de cursos online"
     },
+    "footer": {
+        "gplay": "",
+        "npm": "NPM - Entra para ver mis proyectos de librerías Angular, JS, TS,...",
+        "twitter": "Twitter - Sígueme y podrás tener todas las novedades sobre mis cursos y enlaces a tutoriales interesantes",
+        "udemy": "Udemy - ¡Aprende GraphQL, NPM y más con mis cursos!",
+        "youtube": "Youtube - ¡¡Entra a mi canal de Youtube para disfrutar de contenido gratis!!"
+    },
     "publishedBy": "Publicado por",
     "menus": {
         "about": "Sobre mi",
+        "admin": "Administración",
         "contact": "Contacto",
         "courses": "Cursos",
         "home": "Blog",
