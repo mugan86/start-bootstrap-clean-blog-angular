@@ -26,11 +26,14 @@
         "description": "Lista de cursos online"
     },
     "footer": {
-        "gplay": "",
-        "npm": "NPM - Entra para ver mis proyectos de librerías Angular, JS, TS,...",
-        "twitter": "Twitter - Sígueme y podrás tener todas las novedades sobre mis cursos y enlaces a tutoriales interesantes",
-        "udemy": "Udemy - ¡Aprende GraphQL, NPM y más con mis cursos!",
-        "youtube": "Youtube - ¡¡Entra a mi canal de Youtube para disfrutar de contenido gratis!!"
+        "bintray": "Proyectos de librería Android disponibles - Anartz Mugika Ledo",
+        "github": "Proyectos open source de Angular, Typescript, Javascript, GraphQL y más - Anartz Mugika Ledo",
+        "gplay": "Todas mis aplicaciones publicadas en Google Play - Anartz Mugika Ledo",
+        "linkedin": "Mi perfil en Linkedin - Anartz Mugika Ledo",
+        "npm": "NPM - Entra para ver mis proyectos de librerías Angular, JS, TS,... - Anartz Mugika Ledo",
+        "twitter": "Twitter - Sígueme y podrás tener todas las novedades sobre mis cursos y enlaces a tutoriales interesantes - Anartz Mugika Ledo",
+        "udemy": "Udemy - ¡Aprende GraphQL, NPM y más con mis cursos! - Anartz Mugika Ledo",
+        "youtube": "Youtube - ¡¡Entra a mi canal de Youtube para disfrutar de contenido gratis!! - Anartz Mugika Ledo"
     },
     "publishedBy": "Publicado por",
     "menus": {
