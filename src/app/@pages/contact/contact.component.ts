@@ -5,6 +5,7 @@ import { CONTACT } from 'src/app/@core/components/header/header.constants';
 import { ApiService } from 'src/app/@graphql/services/api.service';
 import { ContactInterface } from './contact.interface';
 import { SeoTitleMetaTagsAngularService } from 'projects/seo-title-meta-tags-angular/src/public-api';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'blog-contact',
@@ -37,11 +38,16 @@ export class ContactComponent {
     this.seoTitleMetaTags.setMetaTags(keywords, description, author);
   }
 
-  save() {
+  save(form: NgForm) {
     this.api.sendMessageContact(this.contact).subscribe(({data}: any) => {
       const contact = data.addContact;
       this.result.message = contact.message;
       this.result.status = contact.status;
+      this.reset(form);
     });
+  }
+
+  reset(form: NgForm) {
+    form.resetForm();
   }
 }

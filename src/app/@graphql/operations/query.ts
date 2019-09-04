@@ -54,7 +54,7 @@ export const getPosts = gql`
                 total
                 itemsPage
             }
-            results {
+            result {
                 id
                 title
                 subtitle
@@ -155,6 +155,38 @@ query selectPost($id: ID!) {
         important
     }
 }
+`;
+
+
+export const getPortfolioData = gql`
+    query getPortfolio($id: ID!){
+        projects {
+            ...ProjectData
+        }
+        project(id: $id) {
+            ...ProjectData
+        }
+    }
+    fragment ProjectData on Project {
+        id
+        name
+        intro
+        description
+        categories {
+            id
+            title
+            color
+        }
+        url
+        urlTitle
+        startData
+        finishData
+        active
+        important
+        finish
+        thumbnail
+        details
+    }
 `;
 
 

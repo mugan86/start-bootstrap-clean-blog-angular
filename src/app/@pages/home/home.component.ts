@@ -28,7 +28,7 @@ export class HomeComponent {
     }, 1500);*/
 
     this.api.getPosts(1, 5).subscribe(data => {
-      this.posts =  data.results.filter(function(post) {
+      this.posts =  data.result.filter(function(post) {
         return post.important === false;
       });
       this.api.getLastImportant().subscribe(important => {

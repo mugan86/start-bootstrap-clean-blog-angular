@@ -4,7 +4,7 @@ mutation addMessageContact($contact: ContactInput!) {
     addContact(contact: $contact) {
         status
         message
-        contact {
+        result {
             id
             name
             email

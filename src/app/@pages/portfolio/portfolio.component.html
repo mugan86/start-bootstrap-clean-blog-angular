@@ -1,52 +1,50 @@
-<div class="row">
+<blog-loading  *ngIf="loading"></blog-loading>
+<div *ngIf="!loading">
+  <h3 class="my-4">Destacado</h3>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="center-element"><img class="img-fluid" [src]="important.thumbnail" [alt]="important.name"><br /><br />
+      </div>
 
-  <div class="col-md-8">
-    <img class="img-fluid" src="https://i.udemycdn.com/course/750x422/1777518_b681_6.jpg" alt="">
+      <a href="{{important.url}}" class="btn btn-info btn-block" target="_blank">{{ important.urlTitle }}</a>
+    </div>
+
+    <div class="col-md-4">
+      <h3 class="my-3 card-title">{{ important.name }}</h3>
+      <span class="categories" [ngStyle]="{'background-color': c.color}" *ngFor="let c of important.categories" >
+          {{ c.title }}
+      </span>
+      <p>{{ important.intro }}</p>
+      <h3 class="my-3 card-title">Funcionalidades</h3>
+      <ul>
+        <li *ngFor="let d of important.details">{{ d }}</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="col-md-4">
-    <h3 class="my-3">Project Description</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-    <h3 class="my-3">Project Details</h3>
-    <ul>
-      <li>Lorem Ipsum</li>
-      <li>Dolor Sit Amet</li>
-      <li>Consectetur</li>
-      <li>Adipiscing Elit</li>
-    </ul>
+  <!-- /.row -->
+  <br/>
+<hr/>
+  <!-- Related Projects Row -->
+  <h3 class="my-4">Otros proyectos</h3>
+  <div class="row others" *ngFor="let p of projects">
+    <div class="col-md-4">
+      <a href="#">
+        <blog-poster-image [classValues]="'img-fluid rounded mb-3 mb-md-0'" *ngIf="p.thumbnail != ''"[src]="p.thumbnail" [alt]="p.name">
+        </blog-poster-image>
+        <blog-poster-image [classValues]="'img-fluid rounded'" [alt]="p.name" *ngIf="p.thumbnail == ''" [src]="'./assets/img/anartz.jpg'"></blog-poster-image>
+      </a>
+    </div>
+    <div class="col-md-8">
+      <h3 class="card-title">{{ p.name }}</h3>
+      <span class="categories" [ngStyle]="{'background-color': c.color}" *ngFor="let c of p.categories" >
+        {{ c.title }}
+      </span>
+      <p>{{p.intro}}</p>
+      <a class="btn btn-primary" href="{{p.url}}" target="_blank">Ver proyecto
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+    <p></p>
   </div>
-
 </div>
-<!-- /.row -->
-
-<!-- Related Projects Row -->
-<h3 class="my-4">Related Projects</h3>
-
-<div class="row">
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-  <div class="col-md-3 col-sm-6 mb-4">
-    <a href="#">
-      <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-    </a>
-  </div>
-
-</div>
-<!-- /.row -->

@@ -30,7 +30,8 @@
     "apollo-client": "^2.6.4",
     "apollo-link": "^1.2.12",
     "apollo-link-error": "^1.1.11",
-    "core-js": "^2.5.4",
+    "classlist.js": "^1.1.20150312",
+    "core-js": "^3.2.1",
     "graphql": "^14.5.3",
     "graphql-tag": "^2.10.1",
     "mugan86-ng-google-analytics": "^1.1.1",
@@ -38,6 +39,7 @@
     "nyc": "^14.1.1",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

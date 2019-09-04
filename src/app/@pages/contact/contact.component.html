@@ -3,7 +3,7 @@
       <div class="alert alert-success" role="alert" *ngIf="result.status == true">
           {{ result.message }}
       </div>
-      <form (ngSubmit)="save()" #forma="ngForm">
+      <form (ngSubmit)="save(forma.value)" #forma="ngForm">
         <div class="form-group floating-label-form-group controls">
             <label for="name">Nombre y Apellidos</label>
             <input id="name" type="text" name="name" class="form-control"

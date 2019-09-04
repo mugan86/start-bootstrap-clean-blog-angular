@@ -59,6 +59,12 @@ export class FooterComponent {
       path: 'mugan86',
       icon: 'fab fa-youtube',
       description: 'footer.youtube'
+    },
+    {
+      url: 'https://hashnode.com/',
+      path: '@mugan86',
+      icon: 'fas fa-blog',
+      description: 'footer.hashnode'
     }
   ];
 

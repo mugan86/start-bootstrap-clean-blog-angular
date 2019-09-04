@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { getCourse, getPosts, login, mostImportantPostData, selectPost } from '../operations/query';
+import { getCourse, getPosts, login, mostImportantPostData, selectPost, getPortfolioData } from '../operations/query';
 import { addMessage } from '../operations/mutation';
 import { map } from 'rxjs/operators';
 
@@ -57,6 +57,12 @@ export class ApiService {
   getPost(id: string) {
     return this.getQuery({ id }, selectPost).valueChanges.pipe(map((result: any) => {
       return result.data.post;
+    }));
+  }
+
+  getPortfolio(important: string) {
+    return this.getQuery({ id: important}, getPortfolioData).valueChanges.pipe(map((result: any) => {
+      return result.data;
     }));
   }
 }

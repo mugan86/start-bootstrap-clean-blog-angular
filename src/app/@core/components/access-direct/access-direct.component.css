@@ -5,3 +5,11 @@ h3, .g-ytsubscribe {
     margin-bottom: 10px;
     margin-top: 20px;
 }
+
+
+img.youtube {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }

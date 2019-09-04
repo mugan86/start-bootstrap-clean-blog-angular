@@ -16,13 +16,9 @@ a {
     width:100%
 }
 
-#inner {
-    display: table;
-    margin: 0 auto;
-    border: 1px solid black;
-  }
-  
- #outer {
-    border: 1px solid red;
-    width:100%
-  }
+.card-title {
+    color: #54595f;
+    font-family: "Roboto",Sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+}

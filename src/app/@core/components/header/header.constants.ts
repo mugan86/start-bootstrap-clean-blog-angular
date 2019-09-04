@@ -3,7 +3,7 @@ import { Header } from './header.interface';
 export const HOME: Header = {
     title: 'articles.last',
     subtitle: 'articles.description',
-    bg: './assets/img/mobile-tunnel.jpg'
+    bg: './assets/img/computer.jpg'
     /*bg: './assets/img/home-bg.jpg'*/
 };
 
@@ -40,5 +40,5 @@ export const CONTACT: Header = {
 export const PORTFOLIO: Header = {
     title: 'portfolio.title',
     subtitle: 'portfolio.description',
-    bg: './assets/img/portfolio-bg.jpg'
+    bg: './assets/img/anartz.jpg'
 };
