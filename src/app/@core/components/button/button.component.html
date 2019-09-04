@@ -1,1 +1,2 @@
-<a  (click)="open(to, param)" class="btn btn-primary float-right" [title]="title">{{ 'buttons.readMore' | translate }} &rarr;</a>
+<a *ngIf="internal" (click)="open(to, param)" class="btn btn-primary float-right" [title]="title">{{ 'buttons.readMore' | translate }} &rarr;</a>
+<a *ngIf="!internal" [href]="externalUrl" target="_blank" class="btn btn-primary float-right" [title]="title">{{ 'buttons.goToInfo' | translate }} &rarr;</a>

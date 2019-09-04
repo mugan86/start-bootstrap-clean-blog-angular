@@ -15,7 +15,8 @@
               <h2 class="card-title"><a (click)="openPost(important.id)">{{ important.title }}</a></h2>
               <blog-publish-info [important]="important.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="important.subtitle"></div>
-              <blog-button [to]="'post'" [param]="important.id" [title]="important.title"></blog-button>
+              <blog-button [externalUrl]="important.url" [title]="important.title"></blog-button>
+              <!--<blog-button [to]="'post'" [param]="important.id" [title]="important.title"></blog-button>-->
             </div>
           </div>
         </div>
@@ -34,7 +35,8 @@
               <h2 class="card-title"><a (click)="openPost(p.id)">{{ p.title }}</a></h2>
               <blog-publish-info [important]="p.important"></blog-publish-info>
               <div class="card-text" [innerHtml]="p.subtitle"></div>
-              <blog-button [to]="'post'" [param]="p.id" [title]="p.title"></blog-button>
+              <blog-button [externalUrl]="p.url" [title]="p.title"></blog-button>
+              <!--<blog-button [to]="'post'" [param]="important.id" [title]="important.title"></blog-button>-->
             </div>
           </div>
         </div>

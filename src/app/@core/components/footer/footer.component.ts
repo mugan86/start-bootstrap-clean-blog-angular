@@ -61,10 +61,10 @@ export class FooterComponent {
       description: 'footer.youtube'
     },
     {
-      url: 'https://hashnode.com/',
+      url: 'https://medium.com/',
       path: '@mugan86',
-      icon: 'fas fa-blog',
-      description: 'footer.hashnode'
+      icon: 'fab fa-medium-m',
+      description: 'footer.medium'
     }
   ];
 

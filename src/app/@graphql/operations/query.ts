@@ -69,6 +69,7 @@ export const getPosts = gql`
                         name
                     }
                 }
+                url
                 categories {
                     id
                     title
@@ -125,6 +126,7 @@ query takeImportant {
             id
             title
         }
+        url
         thumbnail
         createdAt
         updatedAt

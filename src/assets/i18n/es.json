@@ -11,6 +11,7 @@
     "buttons": {
         "olderPosts": "Post antiguos",
         "readMore": "Leer más",
+        "goToInfo": "Ir a la información",
         "accessCourse": "Accede al curso",
         "nextComming": "Próximamente"
     },
@@ -26,7 +27,7 @@
         "description": "Lista de cursos online"
     },
     "footer": {
-        "hashnode": "Artículos técnicos, tutoriales, trucos,... en mi perfil de Hashnode :)",
+        "medium": "Artículos técnicos, tutoriales, trucos,... ¡¡Todo en mi perfil de Medium!! - Anartz Mugika Ledo :)",
         "bintray": "Proyectos de librería Android disponibles - Anartz Mugika Ledo",
         "github": "Proyectos open source de Angular, Typescript, Javascript, GraphQL y más - Anartz Mugika Ledo",
         "gplay": "Todas mis aplicaciones publicadas en Google Play - Anartz Mugika Ledo",

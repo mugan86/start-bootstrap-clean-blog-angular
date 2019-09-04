@@ -24,7 +24,7 @@ export class GraphqlModule {
     });
     const LOCALHOST = 'http://localhost:5300/graphql';
     const PRODUCTION = 'https://personal-graphql-api.herokuapp.com/graphql';
-    const link = ApolloLink.from([errorLink, httpLink.create({ uri: LOCALHOST})]);
+    const link = ApolloLink.from([errorLink, httpLink.create({ uri: PRODUCTION})]);
     apollo.create({
       link,
       cache: new InMemoryCache()
