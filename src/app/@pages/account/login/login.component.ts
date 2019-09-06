@@ -5,6 +5,7 @@ import { ConfigService } from 'src/app/@core/services/config.service';
 import { LOGIN } from 'src/app/@core/components/header/header.constants';
 import { ApiService } from 'src/app/@graphql/services/api.service';
 import { AuthService } from 'src/app/@core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'blog-login',
@@ -16,25 +17,34 @@ export class LoginComponent implements OnInit {
     username: '',
     password: ''
   };
-
+  show: boolean;
   constructor(private translateService: TranslateConfigService,
-              private config: ConfigService, private api: ApiService, private auth: AuthService) { }
+              private config: ConfigService, private router: Router,
+              private api: ApiService, private auth: AuthService) {
+    this.auth.userVar$.subscribe((data: any) => {
+      if (data === null || data.status === false) {
+        this.show = true;
+      } else {
+        this.show = false;
+      }
+    });
+  }
 
   ngOnInit() {
+    this.auth.start();
     this.config.updatebgUrlSubject(LOGIN.bg);
     this.config.updateTitleSubject(LOGIN.title);
     this.config.updateSubtitleSubject(LOGIN.subtitle);
   }
 
   save() {
-    console.log(this.login);
     this.api.login(this.login.username, this.login.password).subscribe( (result: any) => {
       if (result.status) {
         // this.error = false;
         localStorage.setItem('tokenJWT', result.token);
         console.log('login correcto');
         this.auth.updateStateSession(true);
-        // this.router.navigate(['/me']);
+        this.router.navigate(['/admin']);
       } else {
         // this.error = true;
         // this.show = true;

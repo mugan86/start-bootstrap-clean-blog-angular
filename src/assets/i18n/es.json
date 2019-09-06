@@ -37,10 +37,30 @@
         "udemy": "Udemy - ¡Aprende GraphQL, NPM y más con mis cursos! - Anartz Mugika Ledo",
         "youtube": "Youtube - ¡¡Entra a mi canal de Youtube para disfrutar de contenido gratis!! - Anartz Mugika Ledo"
     },
+    "login": {
+        "description": "Formulario para el inicio de sesión",
+        "password": {
+            "main": "Introduzca la contraseña",
+            "input": "Introduzca la contraseña",
+            "required": "El password es necesario",
+            "minlength": "El password debe de tener 4 carácteres mínimo"
+        },
+        "startSession": "Iniciar sesión",
+        "startSessionTitle": "Introduzca credenciales",
+        "title": "Iniciar sesión",
+        "username": {
+            "main": "Introduzca tu correo electrónico",
+            "input": "Introducir correo electrónico",
+            "required": "El correo electrónico es necesario",
+            "minlength": "El correo debe de tener 4 carácteres mínimo"
+        }
+
+    },
     "publishedBy": "Publicado por",
     "menus": {
         "about": "Sobre mi",
         "admin": "Administración",
+        "closeSession": "Cerrar sesión",
         "contact": "Contacto",
         "courses": "Cursos",
         "home": "Blog",

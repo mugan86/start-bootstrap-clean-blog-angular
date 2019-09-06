@@ -34,10 +34,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/register']" routerLinkActive="active" *ngIf="!access">{{ 'menus.register' | translate}}</a>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="active" *ngIf="access">{{ 'menus.admin' | translate}}</a>
-        </li>-->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()" *ngIf="access">{{ 'menus.closeSession' | translate}}</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -27,7 +27,8 @@ export class AuthService {
     this.updateStateSession(false);
     localStorage.removeItem('tokenJWT');
     const currentRouter = this.router.url;
-    if (currentRouter !== '/register' && currentRouter !== '/users') {
+    console.log('rrr0', currentRouter);
+    if (currentRouter === '/admin' || currentRouter.indexOf('/admin/') > -1) {
       this.router.navigate(['/login']);
     }
   }
@@ -43,7 +44,7 @@ export class AuthService {
         if (result.status) {
           if (this.router.url === '/login') {
             this.sincroValues(result, true);
-            this.router.navigate(['/me']);
+            this.router.navigate(['/admin']);
           }
         }
         this.sincroValues(result, result.status);

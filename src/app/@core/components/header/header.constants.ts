@@ -10,7 +10,7 @@ export const HOME: Header = {
 export const LOGIN: Header = {
     title: 'login.title',
     subtitle: 'login.description',
-    bg: './assets/img/mackbook.jpg'
+    bg: './assets/img/login.jpg'
 };
 
 export const REGISTER: Header = {

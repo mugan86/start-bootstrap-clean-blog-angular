@@ -19,6 +19,9 @@ export class AppComponent {
       } else {
         this.inPost = false;
       }
+      if (this.router.url.indexOf('/admin') > -1) {
+        console.warn('ADMIN!!!');
+      }
     });
     // Floating label headings for the contact form
     $('body').on('input propertychange', '.floating-label-form-group', function(e) {

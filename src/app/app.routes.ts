@@ -12,6 +12,8 @@ const APP_ROUTES: Routes = [
     { path: 'login', loadChildren: () => import('./@pages/account/login/login.module').then(m => m.LoginModule)},
     { path: 'register', loadChildren: () => import('./@pages/account/register/register.module').then(m => m.RegisterModule)},
     { path: 'courses', loadChildren: () => import('./@pages/courses/courses.module').then(m => m.CoursesModule)},
+    { path: 'admin', loadChildren: () => import('./@admin/general/general.module').then(m => m.GeneralModule)},
+    { path: 'admin/posts', loadChildren: () => import('./@admin/posts/posts.module').then(m => m.PostsModule)},
     { path: '**', pathMatch: 'full' , redirectTo: 'blog' },
 ];
 

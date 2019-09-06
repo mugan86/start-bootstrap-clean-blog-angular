@@ -1,39 +1,39 @@
-<div class="row animated fadeIn fast">
+<div class="row animated fadeIn fast" *ngIf="show">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-        <h2>Login</h2>
+        <h2>{{ 'login.startSessionTitle' | translate }}</h2>
         <form (ngSubmit)="save()" #forma="ngForm">
             <div class="form-group floating-label-form-group controls">
-                <label for="name">Username</label>
+                <label for="name">{{ 'login.username.main' | translate }}</label>
                 <input id="username" type="text" name="username" class="form-control"
                     [ngClass]="{'is-valid': !username.invalid, 'is-invalid': username.invalid}" required minlength="4"
-                    [(ngModel)]="login.username" #username="ngModel" placeholder="Username">
+                    [(ngModel)]="login.username" #username="ngModel" placeholder="{{ 'login.username.input' | translate }}">
                 <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
                     <div *ngIf="username.errors.required">
-                        username is required.
+                        {{ 'login.username.required' | translate }}.
                     </div>
                     <div *ngIf="username.errors.minlength">
-                        username must be at least 4 characters long.
+                        {{ 'login.username.minlength' | translate }}.
                     </div>
                 </div>
             </div>
             <div class="form-group floating-label-form-group controls">
-                <label for="password">Password</label>
+                <label for="password">{{ 'login.password.main' | translate }}</label>
                 <input id="password" type="password" name="password" class="form-control"
                     [ngClass]="{'is-valid': !password.invalid, 'is-invalid': password.invalid}" required minlength="4"
-                    [(ngModel)]="login.password" #password="ngModel" placeholder="Password">
+                    [(ngModel)]="login.password" #password="ngModel" placeholder="{{ 'login.password.input' | translate }}">
                 <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
                     <div *ngIf="password.errors.required">
-                        Password is required.
+                        {{ 'login.password.required' | translate }}
                     </div>
                     <div *ngIf="password.errors.minlength">
-                        Password must be at least 4 characters long.
+                        {{ 'login.password.minlength' | translate }}
                     </div>
                 </div>
             </div>
             <br/>
-            <button [disabled]="!forma.valid" type="submit" class="btn btn-info">Login</button>
-            &nbsp;<a [routerLink]="['/register']" class="btn btn-outline-info">Register</a>
+            <button [disabled]="!forma.valid" type="submit" class="btn btn-info">{{ 'login.startSession' | translate }}</button>
+            &nbsp;<!--<a [routerLink]="['/register']" class="btn btn-outline-info">Register</a>-->
         </form>
     </div>
     <div class="col-md-3"></div>
