@@ -14,3 +14,16 @@ mutation addMessageContact($contact: ContactInput!) {
     }
 }
 `;
+
+
+export const uploadFile = gql`
+    mutation($file: Upload!) {
+        addPhoto(file: $file) {
+            id
+            filename
+            mimetype
+            path
+            publicId
+        }
+    }
+`;

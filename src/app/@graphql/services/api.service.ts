@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import { getCourse, getPosts, login, mostImportantPostData, selectPost, getPortfolioData } from '../operations/query';
-import { addMessage } from '../operations/mutation';
+import { addMessage, uploadFile } from '../operations/mutation';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -61,8 +61,21 @@ export class ApiService {
   }
 
   getPortfolio(important: string) {
-    return this.getQuery({ id: important}, getPortfolioData).valueChanges.pipe(map((result: any) => {
+    return this.getQuery({ id: important }, getPortfolioData).valueChanges.pipe(map((result: any) => {
       return result.data;
     }));
+  }
+
+  addPhoto(file: any) {
+    console.log(file);
+    return this.apollo.mutate({
+      mutation: uploadFile,
+      variables: {
+        file
+      },
+      context: {
+        useMultipart: true
+      }
+    });
   }
 }

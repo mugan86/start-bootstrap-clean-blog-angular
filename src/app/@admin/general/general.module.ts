@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { GeneralRoutingModule } from './general-routing.module';
 import { GeneralComponent } from './general.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { GeneralComponent } from './general.component';
   ],
   imports: [
     CommonModule,
-    GeneralRoutingModule
+    GeneralRoutingModule,
+    ImageCropperModule
   ],
   exports: [ GeneralComponent]
 })

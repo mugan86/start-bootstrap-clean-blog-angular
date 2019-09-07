@@ -1,3 +1,12 @@
 <div id="general">
-    <p>general works!</p>
+    <input type="file" (change)="fileChangeEvent($event)" />
+    &nbsp;&nbsp;
+    <button (click)="save()">Guardar cambios</button>
+    <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1"
+        [resizeToWidth]="200" [imageQuality]="100" format="png" (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()">
+    </image-cropper>
+
+
+    <img [src]="croppedImage" />
 </div>

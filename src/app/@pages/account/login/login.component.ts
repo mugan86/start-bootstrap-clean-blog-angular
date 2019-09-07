@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
         this.show = false;
       }
     });
+    this.config.updateInPost(false);
   }
 
   ngOnInit() {
