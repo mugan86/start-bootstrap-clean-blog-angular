@@ -16,8 +16,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateCustomModule } from './@core/modules/translate-custom.module';
 import { GraphqlModule } from './@graphql/modules/graphql.module';
-import { GeneralComponent } from './@admin/general/general.component';
-import { PostsComponent } from './@admin/posts/posts.component';
 
 const COMPONENTS = [
   AppComponent
@@ -31,7 +29,7 @@ const PIPES = [
 @NgModule({
   declarations: [
     COMPONENTS,
-    PIPES
+    PIPES,
   ],
   imports: [
     BrowserModule,

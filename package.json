@@ -37,6 +37,7 @@
     "mugan86-ng-google-analytics": "^1.1.1",
     "ng2-ckeditor": "^1.2.4",
     "ngx-image-cropper": "^1.4.1",
+    "ngx-infinite-scroll": "^8.0.0",
     "nyc": "^14.1.1",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -14,6 +14,7 @@ import { AccessDirectModule } from 'src/app/@core/components/access-direct/acces
 @NgModule({
   declarations: [HomeComponent],
   imports: [
+    InfiniteScrollModule,
     SharedPagesModule,
     HomeRoutingModule,
     SidebarModule,

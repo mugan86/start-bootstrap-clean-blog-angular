@@ -22,6 +22,7 @@ export const uploadFile = gql`
             id
             filename
             mimetype
+            url
             path
             publicId
         }
