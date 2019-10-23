@@ -1,5 +1,5 @@
 import { ConfigService } from './../../@core/services/config.service';
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateConfigService } from 'src/app/@core/services/translate-config.service';
 import { HOME } from 'src/app/@core/components/header/header.constants';
 import { ApiService } from 'src/app/@graphql/services/api.service';

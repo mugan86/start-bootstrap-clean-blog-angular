@@ -8,9 +8,9 @@ export class SeoTitleMetaTagsAngularService {
 
   constructor(private titleService: Title, private meta: Meta) { }
 
-  setTitlePage(pageName: string, title: string) {
+  setTitlePage(pageName: string = 'Anartz Mugika Ledo - ', title: string) {
     // SEO
-    this.titleService.setTitle('Anartz Mugika Ledo - '.concat(title));
+    this.titleService.setTitle(pageName.concat(title));
   }
 
   setMetaTags(keywords: string, description: string, author: string, robots: string = 'index, follow') {
