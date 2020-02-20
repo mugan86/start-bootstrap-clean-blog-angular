@@ -13,6 +13,12 @@ import { CommonModule } from '@angular/common';
     HeaderModule,
     FooterModule
   ],
-  declarations: []
+  declarations: [],
+  exports: [
+    SidebarModule,
+    NavbarModule,
+    HeaderModule,
+    FooterModule
+  ]
 })
 export class ComponentsModule { }

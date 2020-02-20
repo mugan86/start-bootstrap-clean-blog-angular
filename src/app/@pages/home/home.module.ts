@@ -1,3 +1,4 @@
+import { LoadingModule } from './../../@core/components/loading/loading.module';
 import { NgModule } from '@angular/core';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
@@ -14,8 +15,9 @@ import { AccessDirectModule } from 'src/app/@core/components/access-direct/acces
 @NgModule({
   declarations: [HomeComponent],
   imports: [
-    InfiniteScrollModule,
     SharedPagesModule,
+    LoadingModule,
+    InfiniteScrollModule,
     HomeRoutingModule,
     SidebarModule,
     PosterImageModule,

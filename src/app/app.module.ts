@@ -1,3 +1,5 @@
+import { PagesModule } from './@pages/pages.module';
+import { ComponentsModule } from './@core/components/components.module';
 import { FooterModule } from './@core/components/footer/footer.module';
 import { HeaderModule } from './@core/components/header/header.module';
 import { NavbarModule } from './@core/components/navbar/navbar.module';
@@ -34,10 +36,8 @@ const PIPES = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule,
-    HeaderModule,
-    FooterModule,
-    SidebarModule,
+    ComponentsModule,
+    PagesModule,
     BrowserAnimationsModule,
     CookieLawModule,
     Mugan86GoogleAnalyticsModule.forRoot(
