@@ -11,7 +11,7 @@ export class EditorComponent implements OnInit {
   ckeConfig: any;
   mycontent: string;
   log = '';
-  @ViewChild('myckeditor', {static: false}) ckeditor: any;
+  @ViewChild('myckeditor') ckeditor: any;
 
   constructor() {
     this.mycontent = `<p>My html content</p>`;

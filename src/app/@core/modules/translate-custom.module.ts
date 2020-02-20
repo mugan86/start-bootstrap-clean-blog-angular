@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 
 // To Translate imports
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -20,10 +20,19 @@ import { TranslateConfigService } from '../services/translate-config.service';
   exports: [TranslateModule]
 })
 export class TranslateCustomModule {
-  static forRoot(languageCodes?: string[], defaultLang?: string) {
+  static forRoot(
+    languageCodes?: string[],
+    defaultLang?: string
+  ): ModuleWithProviders<TranslateCustomModule> {
     return {
       ngModule: TranslateCustomModule,
-      providers: [TranslateConfigService, { provide: 'config', useValue: { default: defaultLang, codes: languageCodes } }]
+      providers: [
+        TranslateConfigService,
+        {
+          provide: 'config',
+          useValue: { default: defaultLang, codes: languageCodes }
+        }
+      ]
     };
   }
 }
